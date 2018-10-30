@@ -15,7 +15,7 @@
 		</div>
 		<div>
 			<h3 class="divider">Active Modules</h3>
-			<ul class="instance_list">
+			<!--<ul class="instance_list">
 				<a href="/wp-admin/admin.php?page=" class="">
 					<h1 class="instance_title instance_plugin">[ Module Name ]</h1>
 					<p class="instance_desc">This is the module description.</p>
@@ -48,7 +48,7 @@
 					<div class="instance_status">Active</div>
 					<div class="instance_msg"></div>
 				</a>
-			</ul>
+			</ul> -->
 		</div>
 	</div>
 </section>
