@@ -3,7 +3,7 @@
 		exit();
 	}
 
-	delete_option('sv_proven_expert');
-	delete_option('widget_sv_proven_expert_widget');
-	delete_transient('sv_proven_expert');
+	delete_option( 'sv_provenexpert' );
+	delete_option( 'widget_sv_provenexpert_widget' );
+	delete_transient( 'sv_provenexpert' );
 ?>

@@ -1,4 +1,6 @@
 <?php
+	namespace sv_provenexpert;
+
 	/**
 	 * @author			Matthias Reuter
 	 * @package			sv_proven_expert
@@ -6,7 +8,8 @@
 	 * @link			https://straightvisions.com
 	 * @since			1.0
 	 */
-	class sv_proven_expert_hooks extends sv_proven_expert{
+
+	class sv_provenexpert_hooks extends sv_provenexpert{
 		public $core					= NULL;
 		
 		/**
@@ -47,7 +50,7 @@
 		 * @since			1.0
 		 */
 		public function filters(){
-			add_filter('plugin_action_links', array($this->core->settings,'plugin_action_links'), 10, 5);
+
 		}
 		public function wp_enqueue_scripts(){
 			wp_enqueue_style('sv_bb_admin_frontend', $this->core->url.'lib/css/frontend.css');

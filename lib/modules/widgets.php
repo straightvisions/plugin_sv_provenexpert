@@ -1,4 +1,6 @@
 <?php
+	namespace sv_provenexpert;
+
 	/**
 	 * @author			Matthias Reuter
 	 * @package			sv_proven_expert
@@ -6,7 +8,7 @@
 	 * @link			https://straightvisions.com
 	 * @since			1.0
 	 */
-	class sv_proven_expert_widgets extends sv_proven_expert{
+	class sv_proven_expert_widgets extends sv_provenexpert {
 		public $core												= NULL;
 		
 		/**

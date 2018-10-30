@@ -33,7 +33,7 @@ So this plugin is build to show review stars retrieved via ProvenExpert.com on y
 
 This plugin is build to work out-of-the-box. Installation is quite simple:
 
-1. Upload `sv_proven_expert`-directory to the `/wp-content/plugins/` directory
+1. Upload `sv_provenexpert`-directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Register a free account on <a href="https://www.provenexpert.com/de/pa281/">ProvenExpert.com</a> - you can try out this feature 30 days for free.
 4. Insert Api Keys in plugin settings
