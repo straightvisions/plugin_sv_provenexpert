@@ -20,8 +20,16 @@ class init extends \sv_core\core {
 
     public function __construct(){
         $this->setup(__NAMESPACE__,__FILE__);
+
+	    /**
+	     * @desc			information for the about section
+	     * @return	void
+	     * @author			Matthias Reuter
+	     * @since			1.0
+	     */
+
         $this->set_section_title('SV ProvenExpert');
-        $this->set_section_desc('Refactored version by A.C.');
+        $this->set_section_desc('Refactored version by A.C.'); //@todo change before deployment
     }
 }
 
