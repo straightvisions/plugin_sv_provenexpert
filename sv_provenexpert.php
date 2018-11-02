@@ -2,8 +2,8 @@
 /*
 Plugin Name: SV ProvenExpert
 Plugin URI: https://straightvisions.com/
-Description: Refactored version by A.C.
-Version: 1.0.1
+Description: Show rating stars via ProvenExpert.com in WordPress..
+Version: 1.0.5
 Author: Matthias Reuter
 Author URI: https://straightvisions.com
 Text Domain: sv_provenexpert
@@ -15,8 +15,8 @@ namespace sv_provenexpert;
 require_once('lib/core/core.php');
 
 class init extends \sv_core\core {
-    const version							= 1002;
-    const version_core_match				= 1004;
+    const version							= 1005;
+    const version_core_match				= 1005;
 
     public function __construct(){
         $this->setup(__NAMESPACE__,__FILE__);
@@ -29,7 +29,7 @@ class init extends \sv_core\core {
 	     */
 
         $this->set_section_title('SV ProvenExpert');
-        $this->set_section_desc('Refactored version by A.C.'); //@todo change before deployment
+        $this->set_section_desc('Show rating stars via ProvenExpert.com in WordPress..'); //@todo change before deployment
     }
 }
 

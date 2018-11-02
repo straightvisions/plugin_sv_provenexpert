@@ -31,14 +31,12 @@
 			$widget->set_ID($this->get_prefix());
 			$widget->set_description( __( 'Show Review Stars in Google SERPs', $this->get_name() ) );
 			$widget->set_template_path( $this->get_path_lib_section( 'frontend','tpl','widget.php' ) );
-			$widget->set_widget_settings(array());
+			$widget->set_widget_settings( array() );
 			static::$widget_class_name  = $widget->load();
 
 			add_shortcode( 'sv_provenexpert', array( $this, 'shortcode' ) );
 
-			if(class_exists($this->get_prefix())) {
-				die('exist');
-			}
+			$this->clear_cache->init();
 		}
 		public function shortcode() {
 			ob_start();
