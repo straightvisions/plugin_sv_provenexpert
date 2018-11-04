@@ -3,7 +3,7 @@
 
 	$errorMessage											= false;
 	$output													= '';
-
+	/*
 	if( function_exists( 'curl_init') ) {
 		try {
 			$instance_settings								= $this->core->get_parent()->common_settings->get_settings();
@@ -13,15 +13,8 @@
 			if( get_transient( 'sv_provenexpert' ) ) {
 				$data										= get_transient('sv_provenexpert');
 			} elseif( strlen( $instance_settings['api_id']->run_type()->get_data() ) > 0 && strlen( $instance_settings['api_key']->run_type()->get_data() ) > 0) {
-				// init curl handler
-				$curlHandler								= curl_init();
-
 				// set curl options
-				curl_setopt( $curlHandler, CURLOPT_TIMEOUT, 3 );
-				curl_setopt( $curlHandler, CURLOPT_RETURNTRANSFER, true );
-				curl_setopt( $curlHandler, CURLOPT_SSL_VERIFYPEER, false );
-				curl_setopt( $curlHandler, CURLOPT_URL, 'https://www.provenexpert.com/api_rating_v2.json?v=' . $this->get_version_core() );
-				curl_setopt( $curlHandler, CURLOPT_USERPWD, trim($instance_settings['api_id']->run_type()->get_data()) . ':' . trim( $instance_settings['api_key']->run_type()->get_data() ) );
+
 
 				if( defined( 'CURLOPT_IPRESOLVE' ) && defined( 'CURL_IPRESOLVE_V4' ) ){
 					curl_setopt( $curlHandler, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4 );
@@ -102,6 +95,8 @@
 		}
 	} else {
 		$errorMessage										= ( '<!-- no curl package installed [v' . $this->get_version_core() . '] -->' );    //@todo Add Error Message to Notices
-	}
+	}*/
 
 	echo '<div class="sv_provenexpert">' . $output . '</div>';
+	//var_dump($this->set_curl_handler()->curl_handler);
+	var_dump($this->set_curl_timeout(3)->curl_handler);
