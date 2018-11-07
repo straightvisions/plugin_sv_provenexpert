@@ -26,7 +26,7 @@
 		 * @since			1.0
 		 */
 		public function init() {
-			$widget					= static::$widgets->create($this);
+			$widget					= static::$widgets->create( $this );
 			$widget->set_title( __( 'SV ProvenExpert.com', $this->get_name() ) );
 			$widget->set_ID($this->get_prefix());
 			$widget->set_description( __( 'Show Review Stars in Google SERPs', $this->get_name() ) );
