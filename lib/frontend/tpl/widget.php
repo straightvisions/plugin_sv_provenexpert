@@ -33,40 +33,44 @@
 				$data										= json_decode( $json, true );
 
 				if( !is_array( $data ) ) {
-					$this->core::$log->create( $this->core->get_parent() )
-						->set_title( 'JSON Error' )
-						->set_desc_public( 'undefined' )
-						->set_desc_admin( 'undefined' )
-						->set_state( 4 );
-
-					// json format is wrong
-					/* $errorMessage							= 'json error (' . date( 'c' ) . ')' . PHP_EOL . PHP_EOL . $json;
-					$data									= array( 'status' => 'error', 'errors' => array( 'json error' ) );
-					$json									= json_encode( $data );
+					/*
+					static::$log->create->log( $this, __FILE__ )
+					                    ->set_title( 'JSON ERROR' )
+					                    ->set_desc( 'Wrong JSON format.' )
+					                    ->set_desc( $json, 'admin' )
+					                    ->set_state( 'error' );
 					*/
 				}
 
 				if( $data['status'] == 'success' ) {
-					// save data in cache file
 					set_transient( 'sv_provenexpert', json_decode( $json,true ), 86400 );
+					/*
+					static::$log->create->log( $this, __FILE__ )
+					                    ->set_title( 'Widget created' )
+					                    ->set_desc( 'The widget was successfully created.' )
+					                    ->set_desc( 'New cache set.', 'admin' )
+					                    ->set_state( 'success' );
+					*/
 				} elseif( !in_array( 'wrongPlan', $data['errors'] ) ){
-					// it used the old data
 					$tmp									= get_transient( 'sv_provenexpert' );
 
 					if( is_array( $tmp ) ) {
 						$data								= $tmp;
-						$this->core::$log->create( $this->core->get_parent() )
-							->set_title( 'Version Error' )
-							->set_desc_public( 'The version is outdated, please update.' )
-							->set_desc_admin( 'Used cached version, because version is not up to date.' )
-							->set_state( 2 );
-						$output								= ( '<!-- from cache because errors [v' . $this->get_version_core() . '] -->' );
+						/*
+						static::$log->create->log( $this, __FILE__ )
+						                    ->set_title( 'Outdated cache' )
+						                    ->set_desc( 'The version is outdated, please update the plugin.' )
+						                    ->set_desc( 'Uses old cached version.', 'admin' )
+						                    ->set_state( 'warning' );
+						*/
 					} else {
-						$this->core::$log->create( $this->core->get_parent() )
-						                 ->set_title( 'Cache Error' )
-						                 ->set_desc_public( 'The version is outdated, please update.' )
-						                 ->set_desc_admin( 'Version is outdated and found no cached version.' )
-						                 ->set_state( 2 );
+						/*
+						static::$log->create->log( $this, __FILE__ )
+						                    ->set_title( 'Cache Error' )
+						                    ->set_desc( 'The version is outdated, please update.' )
+						                    ->set_desc( 'No cached version was found.', 'admin' )
+						                    ->set_state( 'error' );
+						*/
 					}
 				}
 			}
@@ -75,26 +79,41 @@
 			if( $data['status'] == 'success' ) {
 				$output										= $data['aggregateRating'];
 			} else {
-				$this->core::$log->create( $this->core->get_parent() )
-				                 ->set_title( 'Response Error' )
-				                 ->set_desc_public( 'No response from the ProvenExpert Server' )
-				                 ->set_state( 4 );
-
 				if( isset( $data['errors'] ) && is_array( $data['errors'] ) ) {
-					$errorMessage							.= ' (' . implode( ', ', $data['errors'] ) . ')';
+					/*
+					static::$log->create->log( $this, __FILE__ )
+					                    ->set_title( 'Response Error' )
+					                    ->set_desc( 'No response from the ProvenExpert server.' )
+					                    ->set_desc( implode( ', ', $data['errors'] ), 'admin' )
+					                    ->set_state( 'error' );
+					*/
+				} else {
+					/*
+					static::$log->create->log( $this, __FILE__ )
+					                    ->set_title( 'Response Error' )
+					                    ->set_desc( 'No response from the ProvenExpert server.' )
+					                    ->set_desc( ' ', 'admin' )
+					                    ->set_state( 'error' );
+					*/
 				}
-
-				$errorMessage								.= ' [v' . $this->get_version_core() . ']';                                         //@todo Add Error Message to Notices
 			}
 		} catch( Exception $e ) {
-			$errorMessage									= 'exception' . PHP_EOL . PHP_EOL . $e->__toString();                               //@todo Add Error Message to Notices
-			$errorMessage									= ( '<!-- exception error [v' . $this->get_version_core() . '] -->' );             //@todo Add Error Message to Notices
+			/*
+			static::$log->create->log( $this, __FILE__ )
+			                    ->set_title( 'Exception Error' )
+			                    ->set_desc( 'Exception Error' )
+			                    ->set_desc( $e->__toString(), 'admin' )
+			                    ->set_state( 'error' );
+			*/
 		}
 	} else {
-		$this->core::$log->create( $this->core->get_parent() )
-		                 ->set_title( 'No CURL Package installed' )
-		                 ->set_desc_public( 'No CURL Package installed.' )
-		                 ->set_state( 4 );
+		/*
+		static::$log->create->log( $this, __FILE__ )
+		                    ->set_title( 'CURL missing' )
+		                    ->set_desc( 'The CURL package is not installed, please install CURL to use this plugin.' )
+		                    ->set_desc( 'Install CURL: <a href="https://curl.haxx.se/download.html" target="_blank">Download</a>', 'admin' )
+		                    ->set_state( 'error' );
+		*/
 	}
 
 	echo '<div class="sv_provenexpert">' . $output . '</div>';

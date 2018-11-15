@@ -38,6 +38,7 @@
 
 			$this->clear_cache->init();
 		}
+
 		public function shortcode() {
 			ob_start();
 			the_widget(static::$widget_class_name, array(), array(

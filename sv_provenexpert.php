@@ -33,14 +33,14 @@ class init extends \sv_core\core {
     }
     public function update_routine() {
 		if( $this->get_previous_version() < 1005 ) {
-			$settings = $this->modules->common_settings->get_settings();
-			$options            = get_option( 'sv_proven_expert' );
+			$settings                               = $this->modules->common_settings->get_settings();
+			$options                                = get_option( 'sv_proven_expert' );
 
 			foreach ( $options['basic'] as $key => $option) {
-				if( $key == 'API_ID' && isset($option['value'])) {
-					$settings['api_id']->run_type()->set_data($option['value'])->save_option();
-				} else if( $key == 'API_KEY' && isset($option['value']) ) {
-					$settings['api_key']->run_type()->set_data($option['value'])->save_option();
+				if( $key == 'API_ID' && isset( $option['value'] ) ) {
+					$settings['api_id']->run_type()->set_data( $option['value'] )->save_option();
+				} else if( $key == 'API_KEY' && isset( $option['value'] ) ) {
+					$settings['api_key']->run_type()->set_data( $option['value'] )->save_option();
 				}
 			}
 		}
