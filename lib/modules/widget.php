@@ -2,9 +2,9 @@
 	namespace sv_provenexpert;
 
 	/**
-	 * @author			Matthias Reuter
+	 * @author			Matthias Bathke
 	 * @package			sv_proven_expert
-	 * @copyright		2017 Matthias Reuter
+	 * @copyright		2017 Matthias Bathke
 	 * @link			https://straightvisions.com
 	 * @since			1.0
 	 */
@@ -12,7 +12,7 @@
 		protected static $widget_class_name = '';
 		/**
 		 * @desc			Loads other classes of package
-		 * @author			Matthias Reuter
+		 * @author			Matthias Bathke
 		 * @since			1.0
 		 * @ignore
 		 */
@@ -22,7 +22,7 @@
 		/**
 		 * @desc			initialize actions and filters
 		 * @return	void
-		 * @author			Matthias Reuter
+		 * @author			Matthias Bathke
 		 * @since			1.0
 		 */
 		public function init() {

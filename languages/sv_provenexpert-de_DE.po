@@ -1,0 +1,307 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SV ProvenExpert\n"
+"POT-Creation-Date: 2018-12-13 15:13+0100\n"
+"PO-Revision-Date: 2018-12-13 15:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: sv_provenexpert.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: lib/backend/tpl/tools.php:11
+msgid "Clear the cache"
+msgstr "Den Cache löschen"
+
+#: lib/backend/tpl/tools.php:12
+msgid "Click on the button, to clear the cache."
+msgstr "Klicken Sie auf den Button, um den Cache zu löschen."
+
+#: lib/backend/tpl/tools.php:14
+msgid "Clear cache"
+msgstr "Cache leeren"
+
+#: lib/core/abstract.php:101 lib/core/abstract.php:117
+#: lib/core/abstract.php:133
+msgid "not defined"
+msgstr "Keine Datei definiert"
+
+#: lib/core/abstract.php:496
+msgid "No Title defined."
+msgstr "Kein Titel definiert."
+
+#: lib/core/abstract.php:504
+msgid "No description defined."
+msgstr "Keine Beschreibung definiert."
+
+#: lib/core/abstract.php:511
+msgid "No privacy statement defined."
+msgstr "Keine Datenschutzerklärung definiert."
+
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:13
+msgid "Start"
+msgstr "Start"
+
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:14
+msgid "Processing"
+msgstr "In Bearbeitung"
+
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:15
+msgid "Finished"
+msgstr "Beendet"
+
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:18
+msgid "Continue Import from Cycle"
+msgstr "Import fortsetzen von Zyklus"
+
+#: lib/core/backend/tpl/core_docs.php:8
+msgid "get current url"
+msgstr "Aktuelle URL"
+
+#: lib/core/backend/tpl/core_docs.php:9
+msgid "URL to current location"
+msgstr "URL zum aktuellen Standort"
+
+#: lib/core/backend/tpl/core_docs.php:15
+msgid "Name of current instance:"
+msgstr "Name der aktuellen Instanz:"
+
+#: lib/core/backend/tpl/core_docs.php:18
+msgid "Full hierarchy name:"
+msgstr "Voller Hierarchienname:"
+
+#: lib/core/backend/tpl/core_docs.php:24
+msgid "Shortname (without namespace) of current hierarchy class"
+msgstr "Kurzname (ohne Namensraum) der aktuellen Hierarchieklasse"
+
+#: lib/core/backend/tpl/core_docs.php:30
+msgid "Prefix by get_name:"
+msgstr "Präfix via get_name:"
+
+#: lib/core/backend/tpl/core_docs.php:36
+msgid "Prefix by get_name, but root class replaced with sv_common:"
+msgstr "Präfix via get_name, aber root-Klasse durch sv_common ersetzt:"
+
+#: lib/core/backend/tpl/core_docs.php:42
+msgid "Absolute path to instance:"
+msgstr "Absoluter Pfad zur Instanz:"
+
+#: lib/core/backend/tpl/core_docs.php:48
+msgid "Absolute url to instance:"
+msgstr "Absolute URL zur Instanz:"
+
+#: lib/core/backend/tpl/core_docs.php:54
+msgid "Absolute path to core:"
+msgstr "Absoluter Pfad zur Core:"
+
+#: lib/core/backend/tpl/core_docs.php:60
+msgid "Absolute url to core:"
+msgstr "Absolute URL zur Core:"
+
+#: lib/core/backend/tpl/core_docs.php:65
+msgid "Enqueue Admin Styles"
+msgstr "Enqueue Admin Styles"
+
+#: lib/core/backend/tpl/core_docs.php:66
+msgid "Enqueue SV style for admin menu pages:"
+msgstr "Enqueue SV-Style für Admin-Menüseiten:"
+
+#: lib/core/backend/tpl/core_docs.php:70
+msgid "Path Structure"
+msgstr "Pfadstruktur"
+
+#: lib/core/backend/tpl/core_docs.php:71
+msgid ""
+"To encourage following default path structures and to make maintenance "
+"easier, the following methods follow the default structure."
+msgstr ""
+"Um die folgenden Standardpfadstrukturen zu fördern, folgen die folgenden "
+"Methoden der Standardstruktur."
+
+#: lib/core/core.php:96 lib/core/core.php:97
+msgid "straightvisions"
+msgstr "straightvisions"
+
+#: lib/core/info/backend/tpl/about.php:16
+#: lib/core/info/backend/tpl/log_list.php:16
+msgid ""
+"Our themes and plugins share a core which provides commonly used features. "
+"The core is included and shared within each plugin or theme, so make sure if "
+"you update one product, to update all others too."
+msgstr ""
+"Unsere Themen und Plugins teilen einen Kern, der die gängigen Funktionen "
+"bietet. Der Kern ist in jedem Plugin oder Theme enthalten und geteilt. "
+"Stellen Sie möglichst sicher, dass wenn Sie ein Produkt aktualisieren, alle "
+"anderen auch aktualisieren."
+
+#: lib/core/info/backend/tpl/about.php:20
+#: lib/core/info/backend/tpl/log_list.php:20
+msgid "Instances"
+msgstr "Instanzen"
+
+#: lib/core/log/log.php:65 lib/core/notices/notices.php:137
+msgid "Success"
+msgstr "Erfolg"
+
+#: lib/core/log/log.php:66 lib/core/notices/notices.php:138
+msgid "Info"
+msgstr "Info"
+
+#: lib/core/log/log.php:67 lib/core/notices/notices.php:139
+msgid "Warning"
+msgstr "Warnung"
+
+#: lib/core/log/log.php:68 lib/core/notices/notices.php:140
+msgid "Error"
+msgstr "Fehler"
+
+#: lib/core/log/log.php:69 lib/core/notices/notices.php:141
+msgid "Critical"
+msgstr "Kritisch"
+
+#: lib/core/log/modules/create.php:44 lib/core/log/modules/create.php:45
+msgid "SV Log"
+msgstr "SV Log"
+
+#: lib/core/log/modules/create.php:65 lib/core/log/modules/create.php:67
+#: lib/core/log/modules/create.php:68
+msgid "Group"
+msgstr "Gruppe"
+
+#: lib/core/log/modules/create.php:82 lib/core/log/modules/create.php:84
+#: lib/core/log/modules/create.php:85
+msgid "State"
+msgstr "Bundesland"
+
+#: lib/core/notices/modules/woocommerce.php:26
+#: lib/core/notices/modules/woocommerce.php:32
+msgid "WooCommerce Order Note creation failed."
+msgstr "WooCommerce Bestellnotiz konnte nicht erstellt werden."
+
+#: lib/core/notices/modules/woocommerce.php:27
+msgid "Order does not exist"
+msgstr "Die Bestellung existiert nicht"
+
+#: lib/core/notices/modules/woocommerce.php:33
+msgid "WooCommerce is not available."
+msgstr "WooCommerce ist nicht verfügbar."
+
+#: lib/core/notices/notices.php:53
+msgid "SV Notices"
+msgstr "SV Notizen"
+
+#: lib/core/notices/notices.php:54
+msgid "SV Notice"
+msgstr "SV Notiz"
+
+#: lib/core/notices/notices.php:74 lib/core/notices/notices.php:76
+msgid "SV Notices Groups"
+msgstr "SV Notizgruppen"
+
+#: lib/core/notices/notices.php:77
+msgid "SV Notices Group"
+msgstr "SV Notizgruppe"
+
+#: lib/core/settings/modules/setting_group.php:43
+msgid "Add new Entry"
+msgstr "Neue Eintrag hinzufügen"
+
+#: lib/core/settings/modules/setting_group.php:57
+msgid "Entry"
+msgstr "Eintrag"
+
+#: lib/core/settings/modules/setting_group.php:57
+msgid "New Entry"
+msgstr "Neuer Eintrag"
+
+#: lib/core/settings/modules/setting_group.php:58
+msgid "Delete Entry"
+msgstr "Eintrag löschen"
+
+#: lib/core/settings/modules/setting_multi_upload.php:54
+msgid "Allowed Filetypes:"
+msgstr "Erlaubte Dateitypen:"
+
+#: lib/core/settings/modules/setting_multi_upload.php:58
+msgid "all"
+msgstr "Alle"
+
+#: lib/core/settings/modules/setting_multi_upload.php:69
+msgid "Multi Upload cannot be implemented more than once on a page."
+msgstr ""
+"Multi Upload kann nicht mehr als einmal auf einer Seite implementiert werden."
+
+#: lib/core/settings/modules/setting_select_page.php:31
+msgid "No Page selected"
+msgstr "Keine Seite ausgewählt"
+
+#: lib/core/settings/settings.php:200
+msgid "You need at least "
+msgstr "Sie brauchen mindestens"
+
+#: lib/modules/common_settings.php:24
+msgid "API ID"
+msgstr "API ID"
+
+#: lib/modules/common_settings.php:25
+msgid "See API Username on"
+msgstr "Siehe API Nutzername unter"
+
+#: lib/modules/common_settings.php:33
+msgid "API Key"
+msgstr "API Schlüssel"
+
+#: lib/modules/common_settings.php:34
+msgid "See API Key on"
+msgstr "Siehe API Schlüssel unter"
+
+#: lib/modules/widget.php:30
+msgid "SV ProvenExpert.com"
+msgstr "SV ProvenExpert.com"
+
+#: lib/modules/widget.php:32
+msgid "Show Review Stars in Google SERPs"
+msgstr "Zeige Bewertungssterne in den Suchmaschinenergebnissen"
+
+#. Plugin Name of the plugin/theme
+#: sv_provenexpert.php:31
+msgid "SV ProvenExpert"
+msgstr "SV ProvenExpert"
+
+#: sv_provenexpert.php:32
+msgid ""
+"This plugin is build to show review stars retrieved via ProvenExpert on your "
+"site – additionally this enables review stars of your website’s entries in "
+"Google’s search engine result pages."
+msgstr ""
+"Dieses Plugin zeigt die Bewertungssterne von ProvenExpert auf Ihrer Website "
+"- zusätzlich ermöglicht es die Anzeige der Bewertungssterne in Googles "
+"Suchergebnisseiten."
+
+#. Plugin URI of the plugin/theme
+msgid "https://straightvisions.com/"
+msgstr "https://straightvisions.com/"
+
+#. Description of the plugin/theme
+msgid "Show rating stars via ProvenExpert.com in WordPress."
+msgstr "Anzeige von Sternen über ProvenExpert.com in WordPress."
+
+#. Author of the plugin/theme
+msgid "Matthias Bathke"
+msgstr "Matthias Bathke"
+
+#. Author URI of the plugin/theme
+msgid "https://straightvisions.com"
+msgstr "https://straightvisions.com"

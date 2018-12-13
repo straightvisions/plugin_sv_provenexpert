@@ -2,9 +2,9 @@
 /*
 Plugin Name: SV ProvenExpert
 Plugin URI: https://straightvisions.com/
-Description: Show rating stars via ProvenExpert.com in WordPress..
+Description: Show rating stars via ProvenExpert.com in WordPress.
 Version: 1.0.5
-Author: Matthias Reuter
+Author: Matthias Bathke
 Author URI: https://straightvisions.com
 Text Domain: sv_provenexpert
 Domain Path: /languages
@@ -24,12 +24,16 @@ class init extends \sv_core\core {
 	    /**
 	     * @desc			information for the about section
 	     * @return	void
-	     * @author			Matthias Reuter
+	     * @author			Matthias Bathke
 	     * @since			1.0
 	     */
 
-        $this->set_section_title('SV ProvenExpert');
-        $this->set_section_desc('Show rating stars via ProvenExpert.com in WordPress..'); //@todo change before deployment
+        $this->set_section_title(__('SV ProvenExpert', $this->get_root()->get_prefix()));
+        $this->set_section_desc(__('This plugin is build to show review stars retrieved via ProvenExpert on your site – additionally this enables review stars of your website’s entries in Google’s search engine result pages.', 'sv_provenexpert'));
+	    $this->set_section_privacy('<p>
+				'.$this->get_section_title().' does not collect or share any data from clients or visitors.<br />
+				'.$this->get_section_title().' connects to the server of <a href="https://www.provenexpert.com/de/pa281/" target="_blank">ProvenExpert</a> and only sends the given API ID and API Key, to receive the rating for that account.
+			</p>');
     }
     public function update_routine() {
 		if( $this->get_previous_version() < 1005 ) {
@@ -43,6 +47,10 @@ class init extends \sv_core\core {
 					$settings['api_key']->run_type()->set_data( $option['value'] )->save_option();
 				}
 			}
+			
+			// legacy settings
+			delete_option( 'sv_proven_expert' );
+			delete_option( 'widget_sv_provenexpert_widget' );
 		}
 
 		parent::update_routine();
