@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SV ProvenExpert\n"
-"POT-Creation-Date: 2018-12-13 16:15+0100\n"
-"PO-Revision-Date: 2018-12-13 16:18+0100\n"
+"POT-Creation-Date: 2018-12-13 16:54+0100\n"
+"PO-Revision-Date: 2018-12-13 16:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -251,19 +251,31 @@ msgstr "Keine Seite ausgewählt"
 msgid "You need at least "
 msgstr "Sie brauchen mindestens "
 
-#: lib/modules/common_settings.php:24
+#: lib/modules/common_settings.php:6
+msgid "API Settings"
+msgstr "API Einstellungen"
+
+#: lib/modules/common_settings.php:7
+msgid ""
+"Fill out the API settings and add the widget or shortcode to your site. This "
+"will show review stars on your site and in Google search engine result pages."
+msgstr ""
+"Fügen Sie die API Einstellungen ein und platzieren Sie das Widget oder den "
+"Shortcode auf ihrer Website. Die Bewertungssterne werden dann angezeigt."
+
+#: lib/modules/common_settings.php:25
 msgid "API ID"
 msgstr "API ID"
 
-#: lib/modules/common_settings.php:25
+#: lib/modules/common_settings.php:26
 msgid "See API Username on"
 msgstr "Siehe API Nutzername unter"
 
-#: lib/modules/common_settings.php:33
+#: lib/modules/common_settings.php:34
 msgid "API Key"
 msgstr "API Schlüssel"
 
-#: lib/modules/common_settings.php:34
+#: lib/modules/common_settings.php:35
 msgid "See API Key on"
 msgstr "Siehe API Schlüssel unter"
 
