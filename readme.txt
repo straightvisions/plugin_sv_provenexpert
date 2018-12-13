@@ -64,8 +64,7 @@ You can change the style via CSS, e.g. in your theme's style.css.
 1. Result: Review Stars in Google SERP entries
 2. Result: Review Stars on your Website
 3. Settings in WordPress
-4. Clear API cache
-5. Result: Review Stars in machine readable format for Google
+4. Result: Review Stars in machine readable format for Google
 
 == Changelog ==
 
