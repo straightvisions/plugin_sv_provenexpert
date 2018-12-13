@@ -27,9 +27,9 @@
 		 */
 		public function init() {
 			$widget					= static::$widgets->create( $this );
-			$widget->set_title( __( 'SV ProvenExpert.com', $this->get_name() ) );
+			$widget->set_title( __( 'SV ProvenExpert',$this->get_root()->get_prefix() ) );
 			$widget->set_ID($this->get_prefix());
-			$widget->set_description( __( 'Show Review Stars in Google SERPs', $this->get_name() ) );
+			$widget->set_description( __( 'Show Review Stars in Google SERPs',$this->get_root()->get_prefix() ) );
 			$widget->set_template_path( $this->get_path_lib_section( 'frontend','tpl','widget.php' ) );
 			$widget->set_widget_settings( array() );
 			static::$widget_class_name  = $widget->load();

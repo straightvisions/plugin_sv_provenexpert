@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SV ProvenExpert\n"
-"POT-Creation-Date: 2018-12-13 15:13+0100\n"
-"PO-Revision-Date: 2018-12-13 15:15+0100\n"
+"POT-Creation-Date: 2018-12-13 16:15+0100\n"
+"PO-Revision-Date: 2018-12-13 16:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -249,7 +249,7 @@ msgstr "Keine Seite ausgewählt"
 
 #: lib/core/settings/settings.php:200
 msgid "You need at least "
-msgstr "Sie brauchen mindestens"
+msgstr "Sie brauchen mindestens "
 
 #: lib/modules/common_settings.php:24
 msgid "API ID"
@@ -267,18 +267,14 @@ msgstr "API Schlüssel"
 msgid "See API Key on"
 msgstr "Siehe API Schlüssel unter"
 
-#: lib/modules/widget.php:30
-msgid "SV ProvenExpert.com"
-msgstr "SV ProvenExpert.com"
+#. Plugin Name of the plugin/theme
+#: lib/modules/widget.php:30 sv_provenexpert.php:31
+msgid "SV ProvenExpert"
+msgstr "SV ProvenExpert"
 
 #: lib/modules/widget.php:32
 msgid "Show Review Stars in Google SERPs"
 msgstr "Zeige Bewertungssterne in den Suchmaschinenergebnissen"
-
-#. Plugin Name of the plugin/theme
-#: sv_provenexpert.php:31
-msgid "SV ProvenExpert"
-msgstr "SV ProvenExpert"
 
 #: sv_provenexpert.php:32
 msgid ""
@@ -305,3 +301,6 @@ msgstr "Matthias Bathke"
 #. Author URI of the plugin/theme
 msgid "https://straightvisions.com"
 msgstr "https://straightvisions.com"
+
+#~ msgid "SV ProvenExpert.com"
+#~ msgstr "SV ProvenExpert.com"
