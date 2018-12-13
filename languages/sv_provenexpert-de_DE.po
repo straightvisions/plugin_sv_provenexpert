@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SV ProvenExpert\n"
-"POT-Creation-Date: 2018-12-13 16:54+0100\n"
-"PO-Revision-Date: 2018-12-13 16:55+0100\n"
+"POT-Creation-Date: 2018-12-13 17:03+0100\n"
+"PO-Revision-Date: 2018-12-13 17:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -251,17 +251,19 @@ msgstr "Keine Seite ausgewählt"
 msgid "You need at least "
 msgstr "Sie brauchen mindestens "
 
-#: lib/modules/common_settings.php:6
+#: lib/modules/common_settings.php:16
 msgid "API Settings"
 msgstr "API Einstellungen"
 
-#: lib/modules/common_settings.php:7
+#: lib/modules/common_settings.php:17
 msgid ""
-"Fill out the API settings and add the widget or shortcode to your site. This "
-"will show review stars on your site and in Google search engine result pages."
+"Fill out the API settings and add the widget or shortcode [sv_provenexpert] "
+"to your site. This will show review stars on your site and in Google search "
+"engine result pages."
 msgstr ""
 "Fügen Sie die API Einstellungen ein und platzieren Sie das Widget oder den "
-"Shortcode auf ihrer Website. Die Bewertungssterne werden dann angezeigt."
+"Shortcode [sv_provenexpert] auf ihrer Website. Die Bewertungssterne werden "
+"dann angezeigt."
 
 #: lib/modules/common_settings.php:25
 msgid "API ID"
