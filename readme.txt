@@ -69,6 +69,9 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
+= 1.0.5 =
+Major Refactoring
+
 = 1.0.4 =
 Preview and Error Output added on settings screen. Usability in settings field styles improved.
 
@@ -85,6 +88,9 @@ Improved Caching
 Initial Release
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+Major Refactoring
 
 = 1.0.4 =
 Preview and Error Output added on settings screen. Usability in settings field styles improved.
