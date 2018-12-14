@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SV ProvenExpert\n"
-"POT-Creation-Date: 2018-12-13 17:03+0100\n"
-"PO-Revision-Date: 2018-12-13 17:03+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2018-12-14 20:46+0100\n"
+"PO-Revision-Date: 2018-12-14 20:48+0100\n"
+"Last-Translator: Matthias Reuter <info@straightvisions.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -247,7 +247,7 @@ msgstr ""
 msgid "No Page selected"
 msgstr "Keine Seite ausgewählt"
 
-#: lib/core/settings/settings.php:200
+#: lib/core/settings/settings.php:201
 msgid "You need at least "
 msgstr "Sie brauchen mindestens "
 
@@ -256,14 +256,15 @@ msgid "API Settings"
 msgstr "API Einstellungen"
 
 #: lib/modules/common_settings.php:17
+#, php-format
 msgid ""
-"Fill out the API settings and add the widget or shortcode [sv_provenexpert] "
-"to your site. This will show review stars on your site and in Google search "
-"engine result pages."
+"Fill out the API settings and add the widget or shortcode %s to your site. "
+"This will show review stars on your site and in Google search engine result "
+"pages."
 msgstr ""
-"Fügen Sie die API Einstellungen ein und platzieren Sie das Widget oder den "
-"Shortcode [sv_provenexpert] auf ihrer Website. Die Bewertungssterne werden "
-"dann angezeigt."
+"Füllen Sie die API-Einstellungen aus und fügen Sie das Widget oder den "
+"Shortcode %s auf Ihrer Website hinzu. Dies zeigt Rezension-Stars auf Ihrer "
+"Website und in Google-Suchmaschinen-Ergebnisseiten."
 
 #: lib/modules/common_settings.php:25
 msgid "API ID"
@@ -315,6 +316,15 @@ msgstr "Matthias Bathke"
 #. Author URI of the plugin/theme
 msgid "https://straightvisions.com"
 msgstr "https://straightvisions.com"
+
+#~ msgid ""
+#~ "Fill out the API settings and add the widget or shortcode "
+#~ "[sv_provenexpert] to your site. This will show review stars on your site "
+#~ "and in Google search engine result pages."
+#~ msgstr ""
+#~ "Fügen Sie die API Einstellungen ein und platzieren Sie das Widget oder "
+#~ "den Shortcode [sv_provenexpert] auf ihrer Website. Die Bewertungssterne "
+#~ "werden dann angezeigt."
 
 #~ msgid "SV ProvenExpert.com"
 #~ msgstr "SV ProvenExpert.com"

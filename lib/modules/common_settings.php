@@ -14,7 +14,7 @@
 		public function init() {
 			$this->get_root()->add_section( $this );
 			$this->set_section_title( __('API Settings', $this->get_root()->get_prefix()) );
-			$this->set_section_desc( __('Fill out the API settings and add the widget or shortcode [sv_provenexpert] to your site. This will show review stars on your site and in Google search engine result pages.', $this->get_root()->get_prefix()) );
+			$this->set_section_desc( sprintf(__('Fill out the API settings and add the widget or shortcode %s to your site. This will show review stars on your site and in Google search engine result pages.', $this->get_root()->get_prefix()), '<strong>[sv_provenexpert]</strong>') );
 			
 			add_action( 'admin_init', array( $this, 'admin_init' ) );
 			add_action( 'init', array( $this, 'wp_init' ) );
