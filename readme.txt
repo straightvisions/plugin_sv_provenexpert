@@ -5,7 +5,7 @@ Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, googl
 Requires PHP: 7.0
 Requires at least: 4.7
 Tested up to: 5.0.1
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -68,6 +68,11 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
+= 1.0.6 =
+* PHP 7.1 and higher Support: Bugfix for Fatal error: Cannot use lexical variable $widget_class as a parameter name in /wp-content/plugins/sv-provenexpert/lib/core/widgets/widgets.php on line 127
+* Decrease Admin Menu priority
+* highlight shortcode in settings
+
 = 1.0.5 =
 Major Refactoring
 
@@ -87,6 +92,11 @@ Improved Caching
 Initial Release
 
 == Upgrade Notice ==
+
+= 1.0.6 =
+* PHP 7.1 and higher Support: Bugfix for Fatal error: Cannot use lexical variable $widget_class as a parameter name in /wp-content/plugins/sv-provenexpert/lib/core/widgets/widgets.php on line 127
+* Decrease Admin Menu priority
+* highlight shortcode in settings
 
 = 1.0.5 =
 Major Refactoring
