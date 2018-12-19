@@ -35,6 +35,9 @@
 			static::$widget_class_name  = $widget->load();
 
 			add_shortcode( 'sv_provenexpert', array( $this, 'shortcode' ) );
+			
+			// legacy
+			add_shortcode( 'sv_proven_expert', array( $this, 'shortcode' ) );
 
 			$this->clear_cache->init();
 		}

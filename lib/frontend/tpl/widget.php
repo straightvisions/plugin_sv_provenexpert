@@ -76,7 +76,7 @@
 			}
 
 			// print aggregate rating html
-			if( $data['status'] == 'success' ) {
+			if( isset($data['status']) && $data['status'] == 'success' ) {
 				$output										= $data['aggregateRating'];
 			} else {
 				if( isset( $data['errors'] ) && is_array( $data['errors'] ) ) {
