@@ -1,5 +1,5 @@
 === SV Proven Expert ===
-Contributors: straightvisions GmbH
+Contributors: matthias-reuter
 Donate link: https://straightvisions.com
 Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, google star reviews
 Requires PHP: 7.0

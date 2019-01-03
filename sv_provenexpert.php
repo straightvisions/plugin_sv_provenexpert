@@ -4,7 +4,7 @@ Plugin Name: SV ProvenExpert
 Plugin URI: https://straightvisions.com/
 Description: Show rating stars via ProvenExpert.com in WordPress.
 Version: 1.0.7
-Author: Matthias Bathke
+Author: straightvisions GmbH
 Author URI: https://straightvisions.com
 Text Domain: sv_provenexpert
 Domain Path: /languages
