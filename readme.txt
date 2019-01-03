@@ -20,11 +20,11 @@ Show Review Stars via ProvenExpert.com in WordPress
 
 = Service Description =
 
-<a href="https://www.provenexpert.com/de/pa281/">ProvenExpert</a> is a service for company reviews. A key feature ("PLUS" plan required) is showing the company review stars on your website. These will be retrieved from different review-providers like Google, Facebook etc.
+<a href="https://straightvisions.com/go/proven-expert/">ProvenExpert</a> is a service for company reviews. A key feature ("PLUS" plan required) is showing the company review stars on your website. These will be retrieved from different review-providers like Google, Facebook etc.
 
 = Plugin Description =
 
-This plugin is build to show review stars retrieved via <a href="https://www.provenexpert.com/de/pa281/">ProvenExpert</a> on your site - additionally this enables review stars of your website's entries in Google's search engine result pages.
+This plugin is build to show review stars retrieved via <a href="https://straightvisions.com/go/proven-expert/">ProvenExpert</a> on your site - additionally this enables review stars of your website's entries in Google's search engine result pages.
 
 = Team =
 
@@ -32,14 +32,16 @@ This plugin is build to show review stars retrieved via <a href="https://www.pro
 
 == Installation ==
 
-This plugin is build to work out-of-the-box. Installation is quite simple:
+This plugin is build to work out-of-the-box. Installation is quite simple.
 
 1. Upload `sv_provenexpert`-directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Register a free account on <a href="https://www.provenexpert.com/de/pa281/">ProvenExpert.com</a> - you can try out this feature 30 days for free.
+3. Register a free account on <a href="https://straightvisions.com/go/proven-expert/">ProvenExpert.com</a> - you can try out this feature 30 days for free.
 4. Insert Api Keys in plugin settings - see menu entry "straightvisions" in WP-Admin
 5. Add the widget or shortcode `[sv_proven_expert]` somewhere in your wordpress.
 6. You are using a caching plugin? Don't forget to flush caches now.
+
+<a href="https://straightvisions.com/sv-proven-expert/">ProvenExpert WordPress Plugin Docs</a> are available in English and German.
 
 == Frequently asked questions ==
 
@@ -53,7 +55,7 @@ This plugin brings an uninstall routine. Just deactivate plugin on plugin listin
 
 = Does this plugin calls to another server? =
 
-Yes. As <a href="https://www.provenexpert.com/de/pa281/">ProvenExpert</a> is a service in the cloud, it is absolutely required to call the ProvenExpert.com API server to get the required data. The plugin will refresh it's cached data once a day.
+Yes. As <a href="https://straightvisions.com/go/proven-expert/">ProvenExpert</a> is a service in the cloud, it is absolutely required to call the ProvenExpert.com API server to get the required data. The plugin will refresh it's cached data once a day.
 
 = Can I change style of review stars on website? =
 
