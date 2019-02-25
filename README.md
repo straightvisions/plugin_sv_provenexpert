@@ -1,5 +1,7 @@
 # plugin_sv_provenexpert
 
+ProvenExpert WordPress Plugin Docs are available in English and German: https://straightvisions.com/sv-proven-expert/
+
 REQUIRES:
 PHP 7.0 or higher
 WordPress 4.7.x or higher
