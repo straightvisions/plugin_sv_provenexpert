@@ -70,6 +70,9 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
+= 1.0.9 =
+* core update
+
 = 1.0.8 =
 * core update
 
@@ -100,6 +103,9 @@ Improved Caching
 Initial Release
 
 == Upgrade Notice ==
+
+= 1.0.9 =
+* core update
 
 = 1.0.8 =
 * core update
