@@ -32,7 +32,8 @@
 			$widget->set_description( __( 'Show Review Stars in Google SERPs',$this->get_root()->get_prefix() ) );
 			$widget->set_template_path( $this->get_path_lib_section( 'frontend','tpl','widget.php' ) );
 			$widget->set_widget_settings( array() );
-			static::$widget_class_name  = $widget->load();
+			
+			static::$widget_class_name  = $widget->set_widget_class_name(get_class(new class($widget) extends \sv_core\sv_widget{protected static $sv;}))->load();
 
 			add_shortcode( 'sv_provenexpert', array( $this, 'shortcode' ) );
 			
