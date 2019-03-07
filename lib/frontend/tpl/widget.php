@@ -1,25 +1,25 @@
 <?php
 	if( function_exists( 'curl_init') ) {
-		wp_enqueue_style( $this->core->get_prefix(), $this->core->get_url_lib_section( 'frontend', 'css', 'widget.css' ), false, filemtime( $this->core->get_path_lib_section( 'frontend', 'css', 'widget.css' ) ) );
-
+		// we have currently no extra styles for stars widget
+		//$this->get_parent()->scripts_queue['frontend']->set_is_enqueued();
+		
 		$errorMessage										= false;
 		$output												= '';
 
 		try {
-			$instance_settings								= $this->core->get_parent()->common_settings->get_settings();
 			$settings										= $this->get_widget_settings();
-
+			
 			if( get_transient( 'sv_provenexpert' ) ) {
 				$data										= get_transient( 'sv_provenexpert' );
-			} elseif( strlen( $instance_settings['api_id']->run_type()->get_data() ) > 0 && strlen( $instance_settings['api_key']->run_type()->get_data() ) > 0 ) {
-				$curl = $this->core::$curl->create( $this );
+			} elseif( strlen( $settings['api_id']->run_type()->get_data() ) > 0 && strlen( $settings['api_key']->run_type()->get_data() ) > 0 ) {
+				$curl = $this->get_parent()::$curl->create( $this );
 
 				$curl
 					->set_url( 'https://www.provenexpert.com/api_rating_v2.json?v=' . $this->get_version_core() )
 					->set_timeout( 3 )
 					->set_returntransfer( true )
 					->set_ssl_verifypeer( false )
-					->set_userpwd( trim( $instance_settings['api_id']->run_type()->get_data() ) . ':' . trim( $instance_settings['api_key']->run_type()->get_data() ) );
+					->set_userpwd( trim( $settings['api_id']->run_type()->get_data() ) . ':' . trim( $settings['api_key']->run_type()->get_data() ) );
 
 				if( defined( 'CURLOPT_IPRESOLVE' ) && defined( 'CURL_IPRESOLVE_V4' ) ) {
 					$curl->set_ipresolve( CURL_IPRESOLVE_V4 );

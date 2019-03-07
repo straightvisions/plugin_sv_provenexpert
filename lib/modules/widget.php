@@ -26,15 +26,19 @@
 		 * @since			1.0
 		 */
 		public function init() {
+			$this->scripts_queue['frontend']		= static::$scripts->create( $this )
+										 ->set_ID( 'frontend' )
+										 ->set_path( 'lib/frontend/css/widget.css' );
+			
 			$widget					= static::$widgets->create( $this );
 			$widget->set_title( __( 'SV ProvenExpert',$this->get_root()->get_prefix() ) );
 			$widget->set_ID($this->get_prefix());
 			$widget->set_description( __( 'Show Review Stars in Google SERPs',$this->get_root()->get_prefix() ) );
-			$widget->set_template_path( $this->get_path_lib_section( 'frontend','tpl','widget.php' ) );
-			$widget->set_widget_settings( array() );
+			$widget->set_template_path( $this, 'lib/frontend/tpl/widget.php' );
+			$widget->set_widget_settings($this->get_parent()->common_settings->s );
 			
 			static::$widget_class_name  = $widget->set_widget_class_name(get_class(new class($widget) extends \sv_core\sv_widget{protected static $sv;}))->load();
-
+			
 			add_shortcode( 'sv_provenexpert', array( $this, 'shortcode' ) );
 			
 			// legacy

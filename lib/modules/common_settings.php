@@ -16,8 +16,7 @@
 			$this->set_section_title( __('API Settings', $this->get_root()->get_prefix()) );
 			$this->set_section_desc( sprintf(__('Fill out the API settings and add the widget or shortcode %s to your site. This will show review stars on your site and in Google search engine result pages.', $this->get_root()->get_prefix()), '<strong>[sv_provenexpert]</strong>') );
 			
-			add_action( 'admin_init', array( $this, 'admin_init' ) );
-			add_action( 'init', array( $this, 'wp_init' ) );
+			$this->load_settings();
 		}
 		private function load_settings() {
 			$this->s['api_id']	= static::$settings->create($this)
@@ -37,13 +36,5 @@
 				->set_minlength( 43 )
 				->set_required( true )
 				->load_type( 'text' );
-		}
-		public function admin_init() {
-			$this->load_settings();
-		}
-		public function wp_init() {
-			if( !is_admin() ){
-				$this->load_settings();
-			}
 		}
 	}

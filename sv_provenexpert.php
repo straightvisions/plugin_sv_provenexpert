@@ -3,7 +3,7 @@
 Plugin Name: SV ProvenExpert
 Plugin URI: https://straightvisions.com/
 Description: Show rating stars via ProvenExpert.com in WordPress.
-Version: 1.0.9
+Version: 1.3.0
 Author: straightvisions GmbH
 Author URI: https://straightvisions.com
 Text Domain: sv_provenexpert
@@ -15,8 +15,8 @@ namespace sv_provenexpert;
 require_once('lib/core/core.php');
 
 class init extends \sv_core\core {
-    const version							= 1009;
-    const version_core_match				= 1005;
+    const version							= 1300;
+    const version_core_match				= 3001;
 
     public function __construct(){
         $this->setup(__NAMESPACE__,__FILE__);

@@ -15,6 +15,6 @@ class clear_cache extends widget {
 	 */
 	public function init() {
 		$this->get_root()->add_section( $this )
-			->set_section_template_path($this->get_path_lib_section('backend', 'tpl', 'tools.php'));
+			->set_section_template_path($this->get_path('lib/backend/tpl/tools.php'));
 	}
 }
