@@ -5,7 +5,7 @@ Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, googl
 Requires PHP: 7.0
 Requires at least: 4.7
 Tested up to: 5.1
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -70,6 +70,10 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
+= 1.3.1 =
+* core update
+* Bugfix: Remove obsolete Settings from Widgets
+
 = 1.3.0 =
 * core update
 * Bugfix: Widget Loading
@@ -107,6 +111,10 @@ Improved Caching
 Initial Release
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+* core update
+* Bugfix: Remove obsolete Settings from Widgets
 
 = 1.3.0 =
 * core update
