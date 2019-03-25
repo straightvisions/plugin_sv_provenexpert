@@ -7,8 +7,7 @@
 		$output												= '';
 
 		try {
-			$this->get_parent()->common_settings->init();
-			$settings										= $this->get_parent()->common_settings->get_settings();
+			$settings = $this->get_root()->modules->common_settings->load_settings()->get_settings();
 			
 			if( get_transient( 'sv_provenexpert' ) ) {
 				$data										= get_transient( 'sv_provenexpert' );
