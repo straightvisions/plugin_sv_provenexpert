@@ -3,7 +3,7 @@
 
 	class common_settings extends modules {
 		public function __construct() {
-			$this->set_section_type('settings');
+
 		}
 		/**
 		 * @desc			initialize actions and filters
@@ -12,13 +12,15 @@
 		 * @since			1.0
 		 */
 		public function init() {
-			$this->get_root()->add_section( $this );
 			$this->set_section_title( __('API Settings', $this->get_root()->get_prefix()) );
 			$this->set_section_desc( sprintf(__('Fill out the API settings and add the widget or shortcode %s to your site. This will show review stars on your site and in Google search engine result pages.', $this->get_root()->get_prefix()), '<strong>[sv_provenexpert]</strong>') );
-			
+			$this->set_section_type('settings');
+			$this->get_root()->add_section( $this );
+
 			$this->load_settings();
 		}
-		private function load_settings() {
+
+		public function load_settings(): common_settings {
 			$this->s['api_id']	= static::$settings->create($this)
 				->set_ID('api_id')
 				->set_title( __( 'API ID', $this->get_root()->get_prefix() ) )
@@ -36,5 +38,7 @@
 				->set_minlength( 43 )
 				->set_required( true )
 				->load_type( 'text' );
+
+			return $this;
 		}
 	}
