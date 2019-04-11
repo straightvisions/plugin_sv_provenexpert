@@ -15,8 +15,8 @@ namespace sv_provenexpert;
 require_once('lib/core/core.php');
 
 class init extends \sv_core\core {
-    const version							= 1312;
-    const version_core_match				= 3014;
+    const version							= 1313;
+    const version_core_match				= 3017;
 
     public function __construct(){
         $this->setup(__NAMESPACE__,__FILE__);
