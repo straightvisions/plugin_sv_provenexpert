@@ -20,10 +20,12 @@ if(version_compare( phpversion(), $min_php, '>=' )) {
 	
 	class init extends \sv_core\core {
 		const version = 1316;
-		const version_core_match = 3124;
+		const version_core_match = 3125;
 		
 		public function __construct() {
-			$this->setup( __NAMESPACE__, __FILE__ );
+			if(!$this->setup( __NAMESPACE__, __FILE__ )){
+				return false;
+			}
 			
 			/**
 			 * @desc            information for the about section
