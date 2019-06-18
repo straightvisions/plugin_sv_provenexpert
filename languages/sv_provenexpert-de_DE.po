@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SV ProvenExpert\n"
-"POT-Creation-Date: 2018-12-14 20:46+0100\n"
-"PO-Revision-Date: 2018-12-14 20:48+0100\n"
+"POT-Creation-Date: 2019-06-18 21:38+0200\n"
+"PO-Revision-Date: 2019-06-18 21:39+0200\n"
 "Last-Translator: Matthias Reuter <info@straightvisions.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -33,108 +33,96 @@ msgstr "Klicken Sie auf den Button, um den Cache zu löschen."
 msgid "Clear cache"
 msgstr "Cache leeren"
 
-#: lib/core/abstract.php:101 lib/core/abstract.php:117
-#: lib/core/abstract.php:133
+#: lib/core/abstract.php:117 lib/core/abstract.php:133
+#: lib/core/abstract.php:149
 msgid "not defined"
 msgstr "Keine Datei definiert"
 
-#: lib/core/abstract.php:496
+#: lib/core/abstract.php:403
 msgid "No Title defined."
 msgstr "Kein Titel definiert."
 
-#: lib/core/abstract.php:504
+#: lib/core/abstract.php:413
 msgid "No description defined."
 msgstr "Keine Beschreibung definiert."
 
-#: lib/core/abstract.php:511
+#: lib/core/abstract.php:422
 msgid "No privacy statement defined."
 msgstr "Keine Datenschutzerklärung definiert."
 
-#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:13
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:12
 msgid "Start"
 msgstr "Start"
 
-#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:14
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:13
 msgid "Processing"
 msgstr "In Bearbeitung"
 
-#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:15
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:14
 msgid "Finished"
 msgstr "Beendet"
 
-#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:18
+#: lib/core/ajax_fragmented_requests/backend/tpl/form.php:17
 msgid "Continue Import from Cycle"
 msgstr "Import fortsetzen von Zyklus"
 
-#: lib/core/backend/tpl/core_docs.php:8
+#: lib/core/backend/tpl/core_docs.php:12
 msgid "get current url"
 msgstr "Aktuelle URL"
 
-#: lib/core/backend/tpl/core_docs.php:9
+#: lib/core/backend/tpl/core_docs.php:13
 msgid "URL to current location"
 msgstr "URL zum aktuellen Standort"
 
-#: lib/core/backend/tpl/core_docs.php:15
+#: lib/core/backend/tpl/core_docs.php:19
 msgid "Name of current instance:"
 msgstr "Name der aktuellen Instanz:"
 
-#: lib/core/backend/tpl/core_docs.php:18
+#: lib/core/backend/tpl/core_docs.php:22
 msgid "Full hierarchy name:"
 msgstr "Voller Hierarchienname:"
 
-#: lib/core/backend/tpl/core_docs.php:24
+#: lib/core/backend/tpl/core_docs.php:28
 msgid "Shortname (without namespace) of current hierarchy class"
 msgstr "Kurzname (ohne Namensraum) der aktuellen Hierarchieklasse"
 
-#: lib/core/backend/tpl/core_docs.php:30
+#: lib/core/backend/tpl/core_docs.php:34
 msgid "Prefix by get_name:"
 msgstr "Präfix via get_name:"
 
-#: lib/core/backend/tpl/core_docs.php:36
+#: lib/core/backend/tpl/core_docs.php:40
 msgid "Prefix by get_name, but root class replaced with sv_common:"
 msgstr "Präfix via get_name, aber root-Klasse durch sv_common ersetzt:"
 
-#: lib/core/backend/tpl/core_docs.php:42
+#: lib/core/backend/tpl/core_docs.php:46
 msgid "Absolute path to instance:"
 msgstr "Absoluter Pfad zur Instanz:"
 
-#: lib/core/backend/tpl/core_docs.php:48
+#: lib/core/backend/tpl/core_docs.php:52
 msgid "Absolute url to instance:"
 msgstr "Absolute URL zur Instanz:"
 
-#: lib/core/backend/tpl/core_docs.php:54
+#: lib/core/backend/tpl/core_docs.php:58
 msgid "Absolute path to core:"
 msgstr "Absoluter Pfad zur Core:"
 
-#: lib/core/backend/tpl/core_docs.php:60
+#: lib/core/backend/tpl/core_docs.php:64
 msgid "Absolute url to core:"
 msgstr "Absolute URL zur Core:"
 
-#: lib/core/backend/tpl/core_docs.php:65
+#: lib/core/backend/tpl/core_docs.php:69
 msgid "Enqueue Admin Styles"
 msgstr "Enqueue Admin Styles"
 
-#: lib/core/backend/tpl/core_docs.php:66
+#: lib/core/backend/tpl/core_docs.php:70
 msgid "Enqueue SV style for admin menu pages:"
 msgstr "Enqueue SV-Style für Admin-Menüseiten:"
 
-#: lib/core/backend/tpl/core_docs.php:70
-msgid "Path Structure"
-msgstr "Pfadstruktur"
-
-#: lib/core/backend/tpl/core_docs.php:71
-msgid ""
-"To encourage following default path structures and to make maintenance "
-"easier, the following methods follow the default structure."
-msgstr ""
-"Um die folgenden Standardpfadstrukturen zu fördern, folgen die folgenden "
-"Methoden der Standardstruktur."
-
-#: lib/core/core.php:96 lib/core/core.php:97
+#: lib/core/core.php:135 lib/core/core.php:136
 msgid "straightvisions"
 msgstr "straightvisions"
 
-#: lib/core/info/backend/tpl/about.php:16
+#: lib/core/info/backend/tpl/about.php:20
 #: lib/core/info/backend/tpl/log_list.php:16
 msgid ""
 "Our themes and plugins share a core which provides commonly used features. "
@@ -146,28 +134,28 @@ msgstr ""
 "Stellen Sie möglichst sicher, dass wenn Sie ein Produkt aktualisieren, alle "
 "anderen auch aktualisieren."
 
-#: lib/core/info/backend/tpl/about.php:20
+#: lib/core/info/backend/tpl/about.php:24
 #: lib/core/info/backend/tpl/log_list.php:20
 msgid "Instances"
 msgstr "Instanzen"
 
-#: lib/core/log/log.php:65 lib/core/notices/notices.php:137
+#: lib/core/log/log.php:66 lib/core/notices/notices.php:137
 msgid "Success"
 msgstr "Erfolg"
 
-#: lib/core/log/log.php:66 lib/core/notices/notices.php:138
+#: lib/core/log/log.php:67 lib/core/notices/notices.php:138
 msgid "Info"
 msgstr "Info"
 
-#: lib/core/log/log.php:67 lib/core/notices/notices.php:139
+#: lib/core/log/log.php:68 lib/core/notices/notices.php:139
 msgid "Warning"
 msgstr "Warnung"
 
-#: lib/core/log/log.php:68 lib/core/notices/notices.php:140
+#: lib/core/log/log.php:69 lib/core/notices/notices.php:140
 msgid "Error"
 msgstr "Fehler"
 
-#: lib/core/log/log.php:69 lib/core/notices/notices.php:141
+#: lib/core/log/log.php:70 lib/core/notices/notices.php:141
 msgid "Critical"
 msgstr "Kritisch"
 
@@ -214,84 +202,121 @@ msgstr "SV Notizgruppen"
 msgid "SV Notices Group"
 msgstr "SV Notizgruppe"
 
-#: lib/core/settings/modules/setting_group.php:43
-msgid "Add new Entry"
-msgstr "Neue Eintrag hinzufügen"
+#: lib/core/scripts/scripts.php:40
+msgid "Override Scripts Loading."
+msgstr ""
 
-#: lib/core/settings/modules/setting_group.php:57
+#: lib/core/scripts/scripts.php:65
+msgid "Disable all CSS per Default"
+msgstr ""
+
+#: lib/core/scripts/scripts.php:66
+msgid ""
+"CSS enqueued will be disabled by default - you may override this later down "
+"below."
+msgstr ""
+
+#: lib/core/scripts/scripts.php:71
+msgid "Disable all JS per Default"
+msgstr ""
+
+#: lib/core/scripts/scripts.php:72
+msgid ""
+"JS enqueued will be disabled by default - you may override this later down "
+"below."
+msgstr ""
+
+#: lib/core/scripts/scripts.php:91 lib/core/scripts/scripts.php:97
+msgid "Inline"
+msgstr ""
+
+#: lib/core/scripts/scripts.php:91 lib/core/scripts/scripts.php:98
+msgid "Attached"
+msgstr ""
+
+#: lib/core/scripts/scripts.php:96
+msgid "Default"
+msgstr ""
+
+#: lib/core/scripts/scripts.php:99
+msgid "Disabled"
+msgstr ""
+
+#: lib/core/settings/modules/setting_group.php:49
+msgid "Add"
+msgstr ""
+
+#: lib/core/settings/modules/setting_group.php:78
 msgid "Entry"
 msgstr "Eintrag"
 
-#: lib/core/settings/modules/setting_group.php:57
-msgid "New Entry"
-msgstr "Neuer Eintrag"
+#: lib/core/settings/modules/setting_group.php:78
+msgid "Group #"
+msgstr ""
 
-#: lib/core/settings/modules/setting_group.php:58
-msgid "Delete Entry"
-msgstr "Eintrag löschen"
-
-#: lib/core/settings/modules/setting_multi_upload.php:54
+#: lib/core/settings/modules/setting_multi_upload.php:57
 msgid "Allowed Filetypes:"
 msgstr "Erlaubte Dateitypen:"
 
-#: lib/core/settings/modules/setting_multi_upload.php:58
+#: lib/core/settings/modules/setting_multi_upload.php:61
 msgid "all"
 msgstr "Alle"
 
-#: lib/core/settings/modules/setting_multi_upload.php:69
+#: lib/core/settings/modules/setting_multi_upload.php:72
 msgid "Multi Upload cannot be implemented more than once on a page."
 msgstr ""
 "Multi Upload kann nicht mehr als einmal auf einer Seite implementiert werden."
 
-#: lib/core/settings/modules/setting_select_page.php:31
+#: lib/core/settings/modules/setting_select_page.php:28
 msgid "No Page selected"
 msgstr "Keine Seite ausgewählt"
 
-#: lib/core/settings/settings.php:201
+#: lib/core/settings/modules/setting_upload.php:62
+msgid "Delete File"
+msgstr ""
+
+#: lib/core/settings/settings.php:219
 msgid "You need at least "
 msgstr "Sie brauchen mindestens "
 
-#: lib/modules/common_settings.php:16
+#: lib/modules/common_settings.php:15
 msgid "API Settings"
 msgstr "API Einstellungen"
 
-#: lib/modules/common_settings.php:17
+#: lib/modules/common_settings.php:16
 #, php-format
 msgid ""
-"Fill out the API settings and add the widget or shortcode %s to your site. "
-"This will show review stars on your site and in Google search engine result "
-"pages."
+"Fill out the API settings and add the widget or shortcode %s to your site."
 msgstr ""
 "Füllen Sie die API-Einstellungen aus und fügen Sie das Widget oder den "
-"Shortcode %s auf Ihrer Website hinzu. Dies zeigt Rezension-Stars auf Ihrer "
-"Website und in Google-Suchmaschinen-Ergebnisseiten."
+"Shortcode %s auf Ihrer Website hinzu."
 
-#: lib/modules/common_settings.php:25
+#: lib/modules/common_settings.php:26
 msgid "API ID"
 msgstr "API ID"
 
-#: lib/modules/common_settings.php:26
+#: lib/modules/common_settings.php:27
 msgid "See API Username on"
 msgstr "Siehe API Nutzername unter"
 
-#: lib/modules/common_settings.php:34
+#: lib/modules/common_settings.php:35
 msgid "API Key"
 msgstr "API Schlüssel"
 
-#: lib/modules/common_settings.php:35
+#: lib/modules/common_settings.php:36
 msgid "See API Key on"
 msgstr "Siehe API Schlüssel unter"
 
 #. Plugin Name of the plugin/theme
-#: lib/modules/widget.php:30 sv_provenexpert.php:31
+#: lib/modules/widget.php:34 sv_provenexpert.php:37
 msgid "SV ProvenExpert"
 msgstr "SV ProvenExpert"
 
-#: lib/modules/widget.php:32
+#: lib/modules/widget.php:36
 msgid "Show Review Stars in Google SERPs"
 msgstr "Zeige Bewertungssterne in den Suchmaschinenergebnissen"
 
-#: sv_provenexpert.php:32
+#: sv_provenexpert.php:38
 msgid ""
 "This plugin is build to show review stars retrieved via ProvenExpert on your "
 "site – additionally this enables review stars of your website’s entries in "
@@ -310,12 +335,43 @@ msgid "Show rating stars via ProvenExpert.com in WordPress."
 msgstr "Anzeige von Sternen über ProvenExpert.com in WordPress."
 
 #. Author of the plugin/theme
-msgid "Matthias Bathke"
-msgstr "Matthias Bathke"
+msgid "straightvisions GmbH"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://straightvisions.com"
 msgstr "https://straightvisions.com"
+
+#~ msgid "Path Structure"
+#~ msgstr "Pfadstruktur"
+
+#~ msgid ""
+#~ "To encourage following default path structures and to make maintenance "
+#~ "easier, the following methods follow the default structure."
+#~ msgstr ""
+#~ "Um die folgenden Standardpfadstrukturen zu fördern, folgen die folgenden "
+#~ "Methoden der Standardstruktur."
+
+#~ msgid "Add new Entry"
+#~ msgstr "Neue Eintrag hinzufügen"
+
+#~ msgid "New Entry"
+#~ msgstr "Neuer Eintrag"
+
+#~ msgid "Delete Entry"
+#~ msgstr "Eintrag löschen"
+
+#~ msgid ""
+#~ "Fill out the API settings and add the widget or shortcode %s to your "
+#~ "site. This will show review stars on your site and in Google search "
+#~ "engine result pages."
+#~ msgstr ""
+#~ "Füllen Sie die API-Einstellungen aus und fügen Sie das Widget oder den "
+#~ "Shortcode %s auf Ihrer Website hinzu. Dies zeigt Rezension-Stars auf "
+#~ "Ihrer Website und in Google-Suchmaschinen-Ergebnisseiten."
+
+#~ msgid "Matthias Bathke"
+#~ msgstr "Matthias Bathke"
 
 #~ msgid ""
 #~ "Fill out the API settings and add the widget or shortcode "

@@ -116,4 +116,17 @@
 		*/
 	}
 
+	// filter
+
+	$output		= str_replace('@font-face{', '@font-face{font-display: swap;',  $output);
+	preg_match('/<style(.*)?>(.*)?<\/style>/', $output, $match);
+	$output		= str_replace($match[0], '', $output);
+
+	$stars		= '
+	<div class="sv_pe_stars" style="width:'.(round(floatval($data['ratingValue']*15),2)).'px;"><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /></div>
+	';
+
+$output		= str_replace('<span id="pe_stars">', '<span id="pe_stars">'.$stars, $output);
+
+	$this->get_root()->modules->widget->scripts_queue['frontend']->set_is_enqueued();
 	echo '<div class="sv_provenexpert">' . $output . '</div>';

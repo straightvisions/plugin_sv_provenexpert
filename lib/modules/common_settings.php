@@ -13,7 +13,7 @@
 		 */
 		public function init() {
 			$this->set_section_title( __('API Settings', $this->get_root()->get_prefix()) );
-			$this->set_section_desc( sprintf(__('Fill out the API settings and add the widget or shortcode %s to your site. This will show review stars on your site and in Google search engine result pages.', $this->get_root()->get_prefix()), '<strong>[sv_provenexpert]</strong>') );
+			$this->set_section_desc( sprintf(__('Fill out the API settings and add the widget or shortcode %s to your site.', $this->get_root()->get_prefix()), '<strong>[sv_provenexpert]</strong>') );
 			$this->set_section_type('settings');
 			$this->get_root()->add_section( $this );
 
