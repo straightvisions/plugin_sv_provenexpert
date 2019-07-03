@@ -1,7 +1,9 @@
 <?php
 namespace sv_provenexpert;
 
-require_once( dirname(__FILE__) . '/lib/core_plugin/core_plugin.php' );
+if(!class_exists('\sv_core\core_plugin')) {
+	require_once(dirname(__FILE__) . '/lib/core_plugin/core_plugin.php');
+}
 
 class init extends \sv_core\core_plugin {
 	const version = 1400;
