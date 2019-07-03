@@ -1,6 +1,3 @@
 [submodule "lib/sv_core"]
 	path = lib/sv_core
 	url = ../sv_core.git
-[submodule "lib/core"]
-	path = lib/core
-	url = ../sv_core
