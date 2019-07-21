@@ -12,6 +12,7 @@ class modules extends init {
 	 * @since			1.0
 	 */
 	public function init() {
+		$this->freemius->init();
 		$this->common_settings->init();
 		$this->widget->init();
 	}
