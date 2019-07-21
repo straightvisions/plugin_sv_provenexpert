@@ -5,7 +5,7 @@ Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, googl
 Requires PHP: 7.0
 Requires at least: 4.7
 Tested up to: 5.2
-Stable tag: 1.4.00
+Stable tag: 1.4.01
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
