@@ -1,6 +1,8 @@
 .sv_provenexpert {
-
+	display: flex;
+	flex-direction: column;
 }
+
 #pe_stars {
 	display: inline-block;
 	position: relative;

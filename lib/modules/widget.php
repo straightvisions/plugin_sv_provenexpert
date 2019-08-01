@@ -26,11 +26,14 @@
 		 * @since			1.0
 		 */
 		public function init() {
-			$this->scripts_queue['frontend']		= static::$scripts->create( $this )
-										 ->set_ID( 'frontend' )
-										 ->set_path( 'lib/frontend/css/widget.css' );
+			$this->set_section_title( __( 'Widget Settings', 'sv_provenexpert' ) );
+			$this->set_section_desc(__( 'Manage your widgets', 'sv_provenexpert' )  );
+			$this->set_section_type( 'settings' );
+			$this->get_root()->add_section( $this );
 			
-			$widget					= static::$widgets->create( $this )
+			$this->load_settings()->register_scripts();
+			
+			$widget	= static::$widgets->create( $this )
 				->set_title( __( 'SV ProvenExpert',$this->get_root()->get_prefix() ) )
 				->set_ID($this->get_prefix())
 				->set_description( __( 'Show Review Stars in Google SERPs',$this->get_root()->get_prefix() ) )
@@ -48,14 +51,38 @@
 
 		public function shortcode() {
 			ob_start();
-			the_widget(static::$widget_class_name, array(), array(
+			
+			the_widget( static::$widget_class_name, array(), array(
 				'before_widget'										=> '',
 				'after_widget'										=> '',
 				'before_title'										=> '',
 				'after_title'										=> ''
 			) );
+			
 			$output													= ob_get_contents();
+			
 			ob_end_clean();
+			
 			return $output;
+		}
+		
+		protected function load_settings(): widget {
+			$this->get_setting( 'alignment' )
+				->set_title( __( 'Alignment', 'sv_provenexpert' ) )
+				->set_options( array(
+					'left'      => __( 'Left', 'sv_provenexpert' ),
+					'center'    => __( 'Center', 'sv_provenexpert' ),
+					'right'     => __( 'Right', 'sv_provenexpert' )
+				) )
+				->set_default_value( 'center' )
+				->load_type( 'select' );
+			return $this;
+		}
+		
+		protected function register_scripts(): widget {
+			$this->get_script( 'config' )->set_inline( true )->set_path( 'lib/frontend/css/config.php' );
+			$this->get_script( 'frontend' )->set_path( 'lib/frontend/css/widget.css' );
+			
+			return $this;
 		}
 	}

@@ -21,8 +21,7 @@
 		}
 
 		public function load_settings(): common_settings {
-			$this->s['api_id']	= static::$settings->create($this)
-				->set_ID('api_id')
+			$this->get_setting('api_id')
 				->set_title( __( 'API ID', $this->get_root()->get_prefix() ) )
 				->set_description( __( 'See API Username on', $this->get_root()->get_prefix() ) . ' <a href="https://www.provenexpert.com/de/personalisierte-umfragelinks/" target="_blank">ProvenExpert.com</a>' )
 				->set_maxlength( 32 )
@@ -30,8 +29,7 @@
 				->set_required( true )
 				->load_type( 'text' );
 
-			$this->s['api_key']	= static::$settings->create($this)
-				->set_ID('api_key')
+			$this->get_setting('api_key')
 				->set_title( __( 'API Key', $this->get_root()->get_prefix() ) )
 				->set_description( __( 'See API Key on', $this->get_root()->get_prefix() ) . ' <a href="https://www.provenexpert.com/de/personalisierte-umfragelinks/" target="_blank">ProvenExpert.com</a>' )
 				->set_maxlength( 43 )

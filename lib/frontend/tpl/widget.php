@@ -127,6 +127,7 @@
 	';
 
 $output		= str_replace('<span id="pe_stars">', '<span id="pe_stars">'.$stars, $output);
-
-	$this->get_root()->modules->widget->scripts_queue['frontend']->set_is_enqueued();
+	
+	$this->get_root()->modules->widget->get_script( 'config' )->set_is_enqueued();
+	$this->get_root()->modules->widget->get_script( 'frontend' )->set_is_enqueued();
 	echo '<div class="sv_provenexpert">' . $output . '</div>';
