@@ -76,6 +76,13 @@
 	margin: 0 5px;
 }
 
+/* Body - Text */
+.sv_provenexpert_modules_rating_text {
+	font-size: 2rem;
+	text-transform: uppercase;
+	padding-bottom: 30px;
+}
+
 /* Body - Recommendation */
 .sv_provenexpert_modules_rating_recommendation {
 	font-size: 1.1rem;

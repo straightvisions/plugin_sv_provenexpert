@@ -19,6 +19,27 @@
 				}
 				?>
 			</div>
+			<span class="<?php echo $this->get_prefix( 'text' ); ?>">
+				<?php
+				switch ( round( $summary->ratingValue ) ) {
+					case 1:
+						_e( 'Mangelhaft', 'sv_provenexpert' );
+						break;
+					case 2:
+						_e( 'Ausreichend', 'sv_provenexpert' );
+						break;
+					case 3:
+						_e( 'Zufriedenstellend', 'sv_provenexpert' );
+						break;
+					case 4:
+						_e( 'Gut', 'sv_provenexpert' );
+						break;
+					case 5:
+						_e( 'Sehr Gut', 'sv_provenexpert' );
+						break;
+				}
+				?>
+			</span>
 			<span class="<?php echo $this->get_prefix( 'recommendation' ); ?>">
 				<strong><?php echo round( ( $summary->ratingValue / 5 ) * 100 ) . '%&nbsp;'; ?></strong>
 				<?php _e( 'Empfehlungen', 'sv_provenexpert' ); ?>
