@@ -2,6 +2,9 @@
 namespace sv_provenexpert;
 
 class playground extends modules {
+	protected $api_endpoint = 'https://www.provenexpert.com/api/';
+	protected $api_version	= 'v1';
+	
 	public function init() {
 		// Section Info
 		$this->set_section_title( __( 'Playground', 'sv_provenexpert' ) )
@@ -33,5 +36,13 @@ class playground extends modules {
 			 ->load_type( 'text' );
 		
 		return $this;
+	}
+	
+	public function get_api_url(): string {
+		return $this->api_endpoint . $this->api_version . '/';
+	}
+	
+	public function get_request_url( $service = 'auth/url', $function = 'get' ): string {
+		return $this->get_api_url() . $service . '/' . $function;
 	}
 }

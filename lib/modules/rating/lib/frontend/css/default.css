@@ -1,0 +1,108 @@
+/* Common */
+.sv_provenexpert_modules_rating {
+	max-width: 350px !important;
+}
+
+.sv_provenexpert_modules_rating_wrapper,
+.sv_provenexpert_modules_rating_wrapper > div,
+.sv_provenexpert_modules_rating_wrapper > div > * {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.sv_provenexpert_modules_rating_wrapper,
+.sv_provenexpert_modules_rating_wrapper > div {
+	flex-direction: column;
+	background-color: #ffffff;
+}
+
+.sv_provenexpert_modules_rating_wrapper {
+	border: 2px solid #e9e6de;
+}
+
+.sv_provenexpert_modules_rating_wrapper > div > * {
+	padding-left: 15px;
+	padding-right: 15px;
+	justify-content: center;
+}
+
+.sv_provenexpert_modules_rating_logo > svg,
+.sv_provenexpert_modules_rating_stars > svg {
+	display: block;
+	height: auto;
+	width: auto;
+}
+
+/* Header - Company */
+.sv_provenexpert_modules_rating_company {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
+
+/* Header - Logo */
+.sv_provenexpert_modules_rating_logo {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #444444;
+}
+
+.sv_provenexpert_modules_rating_logo > svg {
+	min-width: 200px;
+	min-height: 50px;
+}
+
+/* Header - Description */
+.sv_provenexpert_modules_rating_desc {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: .8rem;
+	color: #ffffff;
+	background-color: #0db1cd;
+}
+
+/* Body */
+.sv_provenexpert_modules_rating_body {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/* Body - Stars */
+.sv_provenexpert_modules_rating_stars {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.sv_provenexpert_modules_rating_stars > svg {
+	min-width: 32px;
+	min-height: 32px;
+	margin: 0 5px;
+}
+
+/* Footer */
+.sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_footer {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	border-top: 1px solid #e9e6de;
+	background-color: #fbfaf9;
+}
+
+/* Footer - Reviews */
+.sv_provenexpert_modules_rating_reviews {
+	font-size: .9rem;
+	color: #0db1cd;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+/* Footer - Meta */
+.sv_provenexpert_modules_rating_wrapper > div > .sv_provenexpert_modules_rating_meta {
+	justify-content: space-between;
+	font-size: .8rem;
+}
+
+.sv_provenexpert_modules_rating_meta .sv_provenexpert_modules_rating_more_info > a {
+	text-decoration: none;
+	color: #0db1cd;
+}

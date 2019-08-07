@@ -7,6 +7,8 @@ class modules extends init {
 	}
 	
 	public function init() {
-		$this->playground->init();
+		//$this->playground->init();
+		$this->api->init();
+		$this->rating->init();
 	}
 }
