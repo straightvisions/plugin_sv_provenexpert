@@ -62,22 +62,27 @@
 	background-color: #0db1cd;
 }
 
-/* Body */
-.sv_provenexpert_modules_rating_body {
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
 /* Body - Stars */
 .sv_provenexpert_modules_rating_stars {
 	display: flex;
 	justify-content: space-evenly;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .sv_provenexpert_modules_rating_stars > svg {
 	min-width: 32px;
 	min-height: 32px;
 	margin: 0 5px;
+}
+
+/* Body - Recommendation */
+.sv_provenexpert_modules_rating_recommendation {
+	font-size: 1.1rem;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #c8b274;
+	border-top: 1px solid #e9e6de;
 }
 
 /* Footer */

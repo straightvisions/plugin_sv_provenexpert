@@ -76,4 +76,8 @@ class api extends modules {
 	public function update( $service = 'auth/url' ) {
 		return $this->send_request( $service, 'update' );
 	}
+	
+	public function children( $service = 'auth/url' ) {
+		return $this->send_request( $service, 'children' );
+	}
 }

@@ -62,65 +62,12 @@ class rating extends modules {
 	}
 	
 	protected function output(): string {
-		$output 	= array();
 		$summary 	= $this->get_parent()->api->get( 'rating/summary' );
 		$profile 	= $this->get_parent()->api->get( 'profile' )->profile;
 		
-		// Wrapper
-		$output[] = '<div class="' . $this->get_prefix() . '">';
-		$output[] = '<div class="' . $this->get_prefix( 'wrapper' ) . '">';
-		
-		// Header
-		$output[] = '<div class="' . $this->get_prefix( 'header' ) . '">';
-		
-		// Header - Company
-		$output[] = '<span class="' . $this->get_prefix( 'company' ) . '">' . $profile->company . '</span>';
-		
-		// Header - Logo
-		$output[] = '<div class="' . $this->get_prefix( 'logo' ) . '">' . $this->icon_logo . '</div>';
-		
-		// Header - Description
-		$output[] = '<span class="' . $this->get_prefix( 'desc' ) . '">Kundenbewertungen</span>';
-		
-		// Header - End
-		$output[] = '</div>';
-		
-		// Body
-		$output[] = '<div class="' . $this->get_prefix( 'body' ) . '">';
-		
-		// Body - Stars
-		$output[] = '<div class="' . $this->get_prefix( 'stars' ) . '">';
-		
-		for( $i = 0; $i < $summary->ratingValue; $i++ ) {
-			$output[] = $this->icon_star;
-		}
-		
-		$output[] = '</div>';
-		
-		// Body - End
-		$output[] = '</div>';
-		
-		// Footer
-		$output[] = '<div class="' . $this->get_prefix( 'footer' ) . '">';
-		
-		// Footer - Rreviews
-		$output[] = '<span class="' . $this->get_prefix( 'reviews' ) . '">' . $summary->reviewCount . ' Kundenbewertungen</span>';
-		
-		// Footer - Meta
-		$output[] = '<div class="' . $this->get_prefix( 'meta' ) . '">';
-		$output[] = '<span class="' . $this->get_prefix( 'date' ) . '">' . current_time( 'd.m.Y', true ) . '</span>';
-		$output[] = '<span class="' . $this->get_prefix( 'more_info' ) . '"><a href="" target="_blank">Mehr Infos</a></span>';
-		$output[] = '</div>';
-		
-		// Footer - End
-		$output[] = '</div>';
-		
-		// Wrapper - End
-		$output[] = '</div></div>';
-		
 		ob_start();
 		
-		echo implode( '', $output );
+		require_once( $this->get_path( 'lib/frontend/tpl/rating.php' ) );
 		$output = ob_get_contents();
 		
 		ob_end_clean();
