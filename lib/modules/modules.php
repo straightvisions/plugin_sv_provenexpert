@@ -3,17 +3,10 @@ namespace sv_provenexpert;
 
 class modules extends init {
 	public function __construct() {
-
+	
 	}
-	/**
-	 * @desc			initialize modules
-	 * @return	void
-	 * @author			Matthias Bathke
-	 * @since			1.0
-	 */
+	
 	public function init() {
-		$this->freemius->init();
-		$this->common_settings->init();
-		$this->widget->init();
+		$this->playground->init();
 	}
 }
