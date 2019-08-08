@@ -1,73 +1,52 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: straightvisions
- * Date: 07.08.2019
- * Time: 15:43
- */
-
 namespace sv_provenexpert;
 
 class rating extends modules {
-	protected $icon_logo = '';
-	protected $icon_star = '';
-	
 	public function init() {
-		$this->register_scripts()
-			 ->set_icons();
+		$this->register_scripts();
 		
 		// Shortcodes
 		add_shortcode( $this->get_root()->get_prefix( $this->get_module_name() ), array( $this, 'shortcode' ) );
-	}
-	
-	public function shortcode( $settings ) {
-		$settings = shortcode_atts(
-			array(
-				'inline' => true,
-			),
-			$settings,
-			$this->get_root()->get_prefix()
-		);
-		
-		$this->get_script( 'default' )
-			 ->set_inline( $settings['inline'] )
-			 ->set_is_enqueued();
-		
-		return $this->output();
 	}
 	
 	protected function register_scripts(): rating {
 		$this->get_script( 'default' )
 			 ->set_path( 'lib/frontend/css/default.css' );
 		
-		return $this;
-	}
-	
-	protected function set_icons(): rating {
-		ob_start();
-		
-		require_once( $this->get_path( 'lib/frontend/icon/logo.svg' ) );
-		$this->icon_logo = ob_get_contents();
-		
-		ob_end_clean();
-		
-		ob_start();
-		
-		require_once( $this->get_path( 'lib/frontend/icon/star.svg' ) );
-		$this->icon_star = ob_get_contents();
-		
-		ob_end_clean();
+		$this->get_script( 'line' )
+			 ->set_path( 'lib/frontend/css/line.css' );
 		
 		return $this;
 	}
 	
-	protected function output(): string {
-		$summary 	= $this->get_parent()->api->get( 'rating/summary' );
-		$profile 	= $this->get_parent()->api->get( 'profile' )->profile;
+	public function shortcode( $settings ): string {
+		$settings = shortcode_atts(
+			array(
+				'inline' 	=> true,
+				'template'	=> 'default',
+			),
+			$settings,
+			$this->get_root()->get_prefix()
+		);
+		
+		return $this->router( $settings );
+	}
+	
+	protected function router( array $settings ): string {
+		if ( ! file_exists( $this->get_path( 'lib/frontend/tpl/' . $settings['template'] . '.php' ) ) ) {
+			$settings['template'] = 'default';
+		}
+		
+		$this->get_script( $settings['template'] )
+			 ->set_inline( $settings['inline'] )
+			 ->set_is_enqueued();
+		
+		$summary 	= $this->get_parent()->api->request_get( 'rating/summary' );
+		$profile 	= $this->get_parent()->api->request_get( 'profile' )->profile;
 		
 		ob_start();
 		
-		require_once( $this->get_path( 'lib/frontend/tpl/rating.php' ) );
+		require_once( $this->get_path( 'lib/frontend/tpl/' . $settings['template'] . '.php' ) );
 		$output = ob_get_contents();
 		
 		ob_end_clean();

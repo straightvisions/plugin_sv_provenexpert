@@ -1,91 +1,101 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900&display=swap');
+
 /* Common */
-.sv_provenexpert_modules_rating {
-	max-width: 350px !important;
+.sv_provenexpert_modules_rating_default {
+	width: 100%;
+	height: auto;
+	max-width: 250px !important;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #444444;
+	padding: 0 !important;
 }
 
-.sv_provenexpert_modules_rating_wrapper,
-.sv_provenexpert_modules_rating_wrapper > div,
-.sv_provenexpert_modules_rating_wrapper > div > * {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper,
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper > div,
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper > div > * {
 	display: flex;
 	width: 100%;
 	align-items: center;
 }
 
-.sv_provenexpert_modules_rating_wrapper,
-.sv_provenexpert_modules_rating_wrapper > div {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper,
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper > div {
 	flex-direction: column;
 	background-color: #ffffff;
 }
 
-.sv_provenexpert_modules_rating_wrapper {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper {
 	border: 2px solid #e9e6de;
 }
 
-.sv_provenexpert_modules_rating_wrapper > div > * {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper > div > * {
 	padding-left: 15px;
 	padding-right: 15px;
 	justify-content: center;
 }
 
-.sv_provenexpert_modules_rating_logo > svg,
-.sv_provenexpert_modules_rating_stars > svg {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_logo > svg,
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_stars > svg {
 	display: block;
 	height: auto;
 	width: auto;
 }
 
 /* Header - Company */
-.sv_provenexpert_modules_rating_company {
-	padding-top: 15px;
-	padding-bottom: 15px;
-	font-weight: bold;
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_company {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 600;
 }
 
 /* Header - Logo */
-.sv_provenexpert_modules_rating_logo {
-	padding-top: 5px;
-	padding-bottom: 5px;
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_logo {
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
 	background-color: #444444;
 }
 
-.sv_provenexpert_modules_rating_logo > svg {
-	min-width: 200px;
-	min-height: 50px;
-}
-
 /* Header - Description */
-.sv_provenexpert_modules_rating_desc {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_desc {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	font-size: .8rem;
+	font-size: 12px;
 	color: #ffffff;
 	background-color: #0db1cd;
+	line-height: 100%;
+	font-weight: 600;
+	letter-spacing: 1px;
 }
 
 /* Body - Stars */
-.sv_provenexpert_modules_rating_stars {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_stars {
 	display: flex;
 	justify-content: space-evenly;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
-.sv_provenexpert_modules_rating_stars > svg {
-	min-width: 32px;
-	min-height: 32px;
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_stars > svg {
+	width: 32px;
+	height: 32px;
 	margin: 0 5px;
+	fill: #c8b274;
 }
 
 /* Body - Text */
-.sv_provenexpert_modules_rating_text {
-	font-size: 2rem;
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_text {
+	font-size: 26px;
 	text-transform: uppercase;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
+	font-weight: 700;
 }
 
 /* Body - Recommendation */
-.sv_provenexpert_modules_rating_recommendation {
-	font-size: 1.1rem;
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_recommendation {
+	font-size: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	color: #c8b274;
@@ -93,28 +103,26 @@
 }
 
 /* Footer */
-.sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_footer {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_footer {
 	padding-top: 15px;
-	padding-bottom: 10px;
 	border-top: 1px solid #e9e6de;
 	background-color: #fbfaf9;
 }
 
 /* Footer - Reviews */
-.sv_provenexpert_modules_rating_reviews {
-	font-size: .9rem;
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_reviews {
+	font-size: 14px;
 	color: #0db1cd;
-	font-weight: bold;
-	margin-bottom: 15px;
+	padding-bottom: 5px;
 }
 
 /* Footer - Meta */
-.sv_provenexpert_modules_rating_wrapper > div > .sv_provenexpert_modules_rating_meta {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_wrapper > div > .sv_provenexpert_modules_rating_meta {
 	justify-content: space-between;
-	font-size: .8rem;
+	font-size: 12px;
 }
 
-.sv_provenexpert_modules_rating_meta .sv_provenexpert_modules_rating_more_info > a {
+.sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_meta .sv_provenexpert_modules_rating_more_info > a {
 	text-decoration: none;
 	color: #0db1cd;
 }

@@ -38,6 +38,7 @@ class api extends modules {
 		return $this;
 	}
 	
+	// Methods for getting information
 	public function get_api_url( $suffix = '' ): string {
 		return $this->api_endpoint . $this->api_version . '/' . $suffix;
 	}
@@ -46,6 +47,48 @@ class api extends modules {
 		return $this->get_api_url( $service . '/' . $function );
 	}
 	
+	public function get_rating_stars( $rating = 0 ): string {
+		$stars = array();
+		
+		for ( $i = 0; $i < $rating; $i++ ) {
+			$stars[] = $this->get_parent()->icon->get( 'star' );
+		}
+		
+		return implode( '', $stars );
+	}
+	
+	public function get_rating_percentage( $rating = 0 ): int {
+		$max_rating = 5;
+		
+		return round( ( $rating / $max_rating ) * 100 );
+	}
+	
+	public function get_rating_text( $rating = 0 ): string {
+		$text = '';
+		
+		switch ( round( $rating ) ) {
+			case 0:
+			case 1:
+				$text = __( 'Mangelhaft', 'sv_provenexpert' );
+				break;
+			case 2:
+				$text = __( 'Ausreichend', 'sv_provenexpert' );
+				break;
+			case 3:
+				$text = __( 'Zufriedenstellend', 'sv_provenexpert' );
+				break;
+			case 4:
+				$text = __( 'Gut', 'sv_provenexpert' );
+				break;
+			case 5:
+				$text = __( 'Sehr Gut', 'sv_provenexpert' );
+				break;
+		}
+		
+		return $text;
+	}
+	
+	// Methods for sending requests to the PE API
 	protected function send_request( string $service, string $function ) {
 		$api_id 		= $this->get_setting( 'api_id' )->run_type()->get_data();
 		$api_key		= $this->get_setting( 'api_key' )->run_type()->get_data();
@@ -65,19 +108,19 @@ class api extends modules {
 		return json_decode( $remote_get->get_response_body() );
 	}
 	
-	public function get( $service = 'auth/url' ) {
+	public function request_get( $service = 'auth/url' ) {
 		return $this->send_request( $service, 'get' );
 	}
 	
-	public function create( $service = 'auth/url' ) {
+	public function request_create( $service = 'auth/url' ) {
 		return $this->send_request( $service, 'create' );
 	}
 	
-	public function update( $service = 'auth/url' ) {
+	public function request_update( $service = 'auth/url' ) {
 		return $this->send_request( $service, 'update' );
 	}
 	
-	public function children( $service = 'auth/url' ) {
+	public function request_children( $service = 'auth/url' ) {
 		return $this->send_request( $service, 'children' );
 	}
 }
