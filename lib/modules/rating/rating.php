@@ -41,6 +41,7 @@ class rating extends modules {
 			 ->set_inline( $settings['inline'] )
 			 ->set_is_enqueued();
 		
+		$ratings	= $this->get_parent()->api->request_get( 'rating' )->ratings;
 		$summary 	= $this->get_parent()->api->request_get( 'rating/summary' );
 		$profile 	= $this->get_parent()->api->request_get( 'profile' )->profile;
 		

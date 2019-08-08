@@ -102,9 +102,24 @@
 	max-height: 30px;
 	max-width: 250px;
 	min-width: 150px;
-	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: auto;
 	line-height: 30px;
 	width: auto;
+	white-space: nowrap;
+}
+
+.sv_provenexpert_modules_rating_line .sv_provenexpert_modules_rating_comment::-webkit-scrollbar {
+	height: 3px;
+}
+
+.sv_provenexpert_modules_rating_line .sv_provenexpert_modules_rating_comment::-webkit-scrollbar-track {
+	background: #e2e2e2;
+}
+
+.sv_provenexpert_modules_rating_line .sv_provenexpert_modules_rating_comment::-webkit-scrollbar-thumb {
+	border: 1px solid #c3c3c3;
+	background: #c3c3c3;
 }
 
 /* More Info */
