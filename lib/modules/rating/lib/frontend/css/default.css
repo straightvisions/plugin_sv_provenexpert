@@ -46,6 +46,9 @@
 
 /* Header - Company */
 .sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_company {
+	height: 45px;
+	text-align: center;
+	line-height: 100%;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-weight: 600;
@@ -53,6 +56,7 @@
 
 /* Header - Logo */
 .sv_provenexpert_modules_rating_default .sv_provenexpert_modules_rating_logo {
+	height: 35px;
 	padding-top: 7.5px;
 	padding-bottom: 7.5px;
 	background-color: #444444;

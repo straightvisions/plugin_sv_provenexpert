@@ -19,7 +19,7 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 }
 ?>
 
-<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'line' ); ?>">
+<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'recommendation' ); ?>">
 	<div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
 		<div class="<?php echo $this->get_prefix( 'logo' ); ?>">
 			<?php echo $icon_logo; ?>
@@ -39,7 +39,7 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 			<strong><?php echo $rating_percentage . '%&nbsp;'; ?></strong>
 			<?php _e( 'Empfehlungen', 'sv_provenexpert' ); ?>
 		</div>
-		<div class="<?php echo $this->get_prefix( 'latest_comment' ); ?>">
+		<div class="<?php echo $this->get_prefix( 'last_comment' ); ?>">
 			<div class="<?php echo $this->get_prefix( 'comment' ); ?>">
 				<?php echo $latest_rating->feedback; ?>
 			</div>
