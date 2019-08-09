@@ -19,8 +19,13 @@ class rating extends modules {
 		$this->get_script( 'line' )
 			 ->set_path( 'lib/frontend/css/line.css' );
 		
-		$this->get_script( 'recommendation' )
-			 ->set_path( 'lib/frontend/css/line.css' );
+		$this->get_script( 'recommend' )
+			 ->set_path( 'lib/frontend/css/recommend.css' );
+		
+		$this->get_script( 'recommend_js' )
+			 ->set_path( 'lib/frontend/js/recommend.js' )
+			->set_deps( array( 'jquery' ) )
+			 ->set_type( 'js' );
 		
 		return $this;
 	}
@@ -46,6 +51,13 @@ class rating extends modules {
 		$this->get_script( $settings['template'] )
 			 ->set_inline( $settings['inline'] )
 			 ->set_is_enqueued();
+		
+		switch ( $settings['template'] ) {
+			case 'recommend':
+				$this->get_script( $settings['template'] . '_js' )
+					 ->set_is_enqueued();
+				break;
+		}
 		
 		$ratings	= $this->get_parent()->api->request_get( 'rating' )->ratings;
 		$summary 	= $this->get_parent()->api->request_get( 'rating/summary' );
