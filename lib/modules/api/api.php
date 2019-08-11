@@ -88,6 +88,11 @@ class api extends modules {
 		return $text;
 	}
 	
+	public function get_competences( $max = 3 ): string {
+		
+		return '';
+	}
+	
 	// Methods for sending requests to the PE API
 	protected function send_request( string $service, string $function ) {
 		$api_id 		= $this->get_setting( 'api_id' )->run_type()->get_data();

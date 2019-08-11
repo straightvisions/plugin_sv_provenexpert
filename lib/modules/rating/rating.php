@@ -22,8 +22,11 @@ class rating extends modules {
 		$this->get_script( 'recommend' )
 			 ->set_path( 'lib/frontend/css/recommend.css' );
 		
-		$this->get_script( 'recommend_js' )
-			 ->set_path( 'lib/frontend/js/recommend.js' )
+		$this->get_script( 'rating_widget' )
+			 ->set_path( 'lib/frontend/css/rating_widget.css' );
+		
+		$this->get_script( 'rating_widget_js' )
+			 ->set_path( 'lib/frontend/js/rating_widget.js' )
 			->set_deps( array( 'jquery' ) )
 			 ->set_type( 'js' );
 		
@@ -53,7 +56,7 @@ class rating extends modules {
 			 ->set_is_enqueued();
 		
 		switch ( $settings['template'] ) {
-			case 'recommend':
+			case 'rating_widget':
 				$this->get_script( $settings['template'] . '_js' )
 					 ->set_is_enqueued();
 				break;

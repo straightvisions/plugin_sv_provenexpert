@@ -5,7 +5,7 @@
 .sv_provenexpert_modules_rating_recommend {
 	width: 100%;
 	height: auto;
-	max-width: 960px !important;
+	max-width: 500px !important;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -29,6 +29,8 @@
 	font-weight: 600;
 	background-color: #444444;
 	border-bottom: 2px solid #0db1cd;
+	font-size: 12px;
+	justify-content: space-between;
 }
 
 /* Header - Logo */
@@ -41,21 +43,30 @@
 	margin-left: 15px;
 }
 
+/* Header - More Info */
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_more_info > a {
+	color: #0db1cd;
+	text-decoration: none;
+}
+
 /* Body */
 .sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_body {
 	display: flex;
-	padding: 10px 15px;
+	justify-content: space-between;
+	padding: 15px 15px 0 15px;
 }
 
-/* Body - Info */
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_info > div {
-	padding: 15px;
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_body > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-/* Body - Avatar */
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_avatar > img {
-	width: auto;
-	height: auto;
+/* Body - Quality Badge */
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_quality_badge > a > img {
+	width: 100%;
+	height: 100%;
 	min-width: 70px;
 	min-height: 70px;
 	max-width: 140px;
@@ -63,43 +74,22 @@
 	object-fit: contain;
 }
 
-/* Body - Info */
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_info,
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_info > div {
-	display: flex;
-	align-items: center;
-}
-
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_info > div {
-	flex-direction: column;
-	justify-content: center;
-}
-
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_info {
-	border-radius: 4px;
-	margin-left: 15px;
-	flex: 2;
-}
-
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_info > div > div {
-	margin-top: 10px;
-}
-
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_info > div > div:first-child {
-	margin-top: 0;
-}
-
-	/* Body - Compare */
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_compare {
-	font-weight: 600;
-	font-size: 14px;
-	color: #c8b274;
+/* Body - Stars & Text */
+.sv_provenexpert_modules_rating_recommend div.sv_provenexpert_modules_rating_stars_and_text {
+	justify-content: space-evenly;
 }
 
 /* Body - Stars */
 .sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_stars > svg {
 	margin: 0 2.5px;
 	fill: #c8b274;
+}
+
+/* Body - Compare */
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_compare {
+	font-weight: 600;
+	font-size: 14px;
+	color: #c8b274;
 }
 
 /* Body - Text */
@@ -120,31 +110,28 @@
 	line-height: 130%;
 }
 
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_recommendation > div:first-child {
-	font-size: 24px;
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_recommendation > div:first-of-type {
+	font-size: 20px;
+	font-weight: 600;
 }
 
-/* Body - Service */
-.sv_provenexpert_modules_rating_recommend div.sv_provenexpert_modules_rating_service {
-	align-items: flex-start;
-	justify-content: space-between;
-	height: 100%;
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_recommendation > svg {
+	width: auto;
+	height: auto;
+	min-height: 65px;
+	max-width: 65px;
+	max-height: 65px;
+	fill: #c8b274;
 }
 
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_service > div > div {
-	color: #c8b274;
-	line-height: 110%;
+/* Footer */
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_footer {
+	padding: 15px;
 }
 
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_service > div > div:first-child {
-	color: #444444;
-}
-
-/* Body - Latest Comments */
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comments {
-	z-index: 2;
+/* Footer- Latest Comment */
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comment {
 	flex: 1;
-	position: relative;
 	border: 1px solid #c8b274;
 	font-size: 12px;
 	color: #444444;
@@ -157,36 +144,18 @@
 	overflow-y: auto;
 	line-height: 150%;
 	font-weight: 400;
-	margin-left: 15px;
+	padding: 10px 15px;
 }
 
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comments::-webkit-scrollbar {
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comment::-webkit-scrollbar {
 	width: 3px;
 }
 
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comments::-webkit-scrollbar-track {
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comment::-webkit-scrollbar-track {
 	background: #e2e2e2;
 }
 
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comments::-webkit-scrollbar-thumb {
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comment::-webkit-scrollbar-thumb {
 	border: 1px solid #c3c3c3;
 	background: #c3c3c3;
-}
-
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comments > div {
-	position: absolute;
-	z-index: 1;
-	padding: 10px;
-	transform: translate( -100%, 0 );
-	transition: transform .5s ease-in-out;
-}
-
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comments > div.active {
-	transform: translate( 0, 0 );
-	transition: transform .5s ease-in-out;
-}
-
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_latest_comments > div.active ~ div {
-	transform: translate( 100%, 0 );
-	transition: transform .5s ease-in-out;
 }
