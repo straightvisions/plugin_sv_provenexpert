@@ -65,6 +65,10 @@
 	background-color: #444444;
 }
 
+.sv_provenexpert_modules_rating_slide .sv_provenexpert_modules_rating_logo > a {
+	display: flex;
+}
+
 /* Header - Description */
 .sv_provenexpert_modules_rating_slide .sv_provenexpert_modules_rating_desc {
 	padding-top: 5px;
@@ -117,10 +121,11 @@
 }
 
 /* Footer - Reviews */
-.sv_provenexpert_modules_rating_slide .sv_provenexpert_modules_rating_reviews {
+.sv_provenexpert_modules_rating_slide .sv_provenexpert_modules_rating_reviews > a {
 	font-size: 14px;
 	color: #0db1cd;
 	padding-bottom: 5px;
+	text-decoration: none;
 }
 
 /* Footer - Meta */

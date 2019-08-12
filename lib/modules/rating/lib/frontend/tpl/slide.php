@@ -26,7 +26,9 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 				<?php echo $profile->company; ?>
 			</div>
 			<div class="<?php echo $this->get_prefix( 'logo' ); ?>">
-				<?php echo $icon_logo; ?>
+				<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
+					<?php echo $icon_logo; ?>
+				</a>
 			</div>
 			<div class="<?php echo $this->get_prefix( 'desc' ); ?>">
 				<?php _e( 'Kundenbewertungen', 'sv_provenexpert' ); ?>
@@ -46,7 +48,9 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 		</div>
 		<div class="<?php echo $this->get_prefix( 'footer' ); ?>">
 			<div class="<?php echo $this->get_prefix( 'reviews' ); ?>">
-				<?php echo $summary->reviewCount . ' ' . __( 'Kundenbewertungen', 'sv_provenexpert' ); ?>
+				<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
+					<?php echo $summary->reviewCount . ' ' . __( 'Kundenbewertungen', 'sv_provenexpert' ); ?>
+				</a>
 			</div>
 			<div class="<?php echo $this->get_prefix( 'meta' ); ?>">
 				<div class="<?php echo $this->get_prefix( 'date' ); ?>">

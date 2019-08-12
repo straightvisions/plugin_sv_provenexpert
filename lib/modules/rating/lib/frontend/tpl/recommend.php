@@ -26,7 +26,9 @@ $icon_user				= $this->get_parent()->icon->get( 'user' );
     <div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
         <div class="<?php echo $this->get_prefix( 'header' ); ?>">
             <div class="<?php echo $this->get_prefix( 'logo' ); ?>">
-				<?php echo $icon_logo; ?>
+				<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
+					<?php echo $icon_logo; ?>
+				</a>
             </div>
             <div class="<?php echo $this->get_prefix( 'desc' ); ?>">
                 <?php _e( 'Kundenbewertungen', 'sv_provenexpert' ); ?>
@@ -43,7 +45,7 @@ $icon_user				= $this->get_parent()->icon->get( 'user' );
         <div class="<?php echo $this->get_prefix( 'body' ); ?>">
 			<?php // @todo Replace with original image ?>
             <div class="<?php echo $this->get_prefix( 'quality_badge' ); ?>">
-				<a href="" target="_blank">
+				<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
 					<img src="https://www.provenexpert.com/images/de-de/widget/circle/widget.png?t=1565535425497" alt="Qualitätssiegel">
 				</a>
             </div>

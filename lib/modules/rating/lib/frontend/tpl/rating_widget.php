@@ -27,7 +27,9 @@ $icon_user				= $this->get_parent()->icon->get( 'user' );
     <div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
         <div class="<?php echo $this->get_prefix( 'header' ); ?>">
             <div class="<?php echo $this->get_prefix( 'logo' ); ?>">
-				<?php echo $icon_logo; ?>
+				<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
+					<?php echo $icon_logo; ?>
+				</a>
             </div>
             <div class="<?php echo $this->get_prefix( 'desc' ); ?>">
                 <?php _e( 'Kundenbewertungen', 'sv_provenexpert' ); ?>
@@ -35,7 +37,9 @@ $icon_user				= $this->get_parent()->icon->get( 'user' );
         </div>
         <div class="<?php echo $this->get_prefix( 'body' ); ?>">
             <div class="<?php echo $this->get_prefix( 'avatar' ); ?>">
-                <img src="<?php echo $profile->avatarUrl; ?>" alt="<?php echo $profile->company; ?>'s Avatar">
+				<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
+                	<img src="<?php echo $profile->avatarUrl; ?>" alt="<?php echo $profile->company; ?>'s Avatar">
+				</a>
             </div>
             <div class="<?php echo $this->get_prefix( 'info' ); ?>">
                 <div class="<?php echo $this->get_prefix( 'stars_and_text' ); ?>">

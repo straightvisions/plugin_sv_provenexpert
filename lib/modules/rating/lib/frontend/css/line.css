@@ -66,6 +66,16 @@
 	background-color: #444444;
 }
 
+.sv_provenexpert_modules_rating_line .sv_provenexpert_modules_rating_logo > a {
+	display: flex;
+}
+
+/* Reviews */
+.sv_provenexpert_modules_rating_line .sv_provenexpert_modules_rating_reviews > a {
+	text-decoration: none;
+	color: #0db1cd;
+}
+
 /* Rating Stars */
 .sv_provenexpert_modules_rating_line .sv_provenexpert_modules_rating_stars {
 	display: flex;

@@ -32,7 +32,7 @@
 }
 
 /* Header - Logo */
-.sv_provenexpert_modules_rating_rating_widget .sv_provenexpert_modules_rating_logo {
+.sv_provenexpert_modules_rating_rating_widget .sv_provenexpert_modules_rating_logo > a {
 	display: flex;
 }
 
@@ -53,7 +53,7 @@
 }
 
 /* Body - Avatar */
-.sv_provenexpert_modules_rating_rating_widget .sv_provenexpert_modules_rating_avatar > img {
+.sv_provenexpert_modules_rating_rating_widget .sv_provenexpert_modules_rating_avatar > a > img {
 	width: auto;
 	height: auto;
 	min-width: 70px;

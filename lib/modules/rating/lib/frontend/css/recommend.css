@@ -34,7 +34,7 @@
 }
 
 /* Header - Logo */
-.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_logo {
+.sv_provenexpert_modules_rating_recommend .sv_provenexpert_modules_rating_logo > a {
 	display: flex;
 }
 

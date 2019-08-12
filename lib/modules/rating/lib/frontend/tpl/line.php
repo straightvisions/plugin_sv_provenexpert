@@ -22,10 +22,14 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 <div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'line' ); ?>">
 	<div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
 		<div class="<?php echo $this->get_prefix( 'logo' ); ?>">
-			<?php echo $icon_logo; ?>
+			<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
+				<?php echo $icon_logo; ?>
+			</a>
 		</div>
 		<div class="<?php echo $this->get_prefix( 'reviews' ); ?>">
-			<?php echo $summary->reviewCount . ' ' . __( 'Kundenbewertungen', 'sv_provenexpert' ); ?>
+			<a href="<?php echo $profile->profileUrl; ?>" target="_blank">
+				<?php echo $summary->reviewCount . ' ' . __( 'Kundenbewertungen', 'sv_provenexpert' ); ?>
+			</a>
 		</div>
 		<div class="<?php echo $this->get_prefix( 'stars_and_text' ); ?>">
 			<div class="<?php echo $this->get_prefix( 'stars' ); ?>">
