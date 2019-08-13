@@ -9,7 +9,7 @@ $rating_stars		= $this->get_parent()->api->get_rating_stars( $summary->ratingVal
     </div>
     <div class="<?php echo $this->get_prefix( 'reviews' ); ?>">
         <a href="<?php echo $profile->profileUrl; ?>" target="_blank">
-		    <?php echo $summary->reviewCount . ' ' . __( 'Bewertungen', 'sv_provenexpert' ) . 'auf ProvenExpert.com'; ?>
+		    <?php echo $summary->reviewCount . ' ' . __( 'Bewertungen auf ProvenExpert.com', 'sv_provenexpert' ); ?>
         </a>
     </div>
 </div>
