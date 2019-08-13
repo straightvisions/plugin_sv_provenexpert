@@ -1,6 +1,7 @@
 <?php
 // Info vars
-$latest_rating      = array( 'created' => 631152000 );
+$latest_rating          = new stdClass();
+$latest_rating->created = 631152000;
 
 foreach ( get_object_vars( $ratings ) as $rating ) {
 	if (

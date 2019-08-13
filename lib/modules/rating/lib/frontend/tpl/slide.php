@@ -5,8 +5,9 @@ $rating_text		= $this->get_parent()->api->get_rating_text( $summary->ratingValue
 $rating_stars		= $this->get_parent()->api->get_rating_stars( $summary->ratingValue );
 $rating_percentage 	= $this->get_parent()->api->get_rating_percentage( $summary->ratingValue );
 $icon_logo			= $this->get_parent()->icon->get( 'logo_white' );
-	
-$latest_rating      = array( 'created' => 631152000 );
+
+$latest_rating          = new stdClass();
+$latest_rating->created = 631152000;
 
 foreach ( get_object_vars( $ratings ) as $rating ) {
     if (

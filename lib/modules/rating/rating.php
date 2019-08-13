@@ -13,6 +13,9 @@ class rating extends modules {
 		$this->get_script( 'default' )
 			 ->set_path( 'lib/frontend/css/default.css' );
 		
+		$this->get_script( 'simple' )
+			 ->set_path( 'lib/frontend/css/simple.css' );
+		
 		$this->get_script( 'slide' )
 			 ->set_path( 'lib/frontend/css/slide.css' );
 		

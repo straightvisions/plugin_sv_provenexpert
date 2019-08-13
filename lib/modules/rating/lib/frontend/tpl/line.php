@@ -1,12 +1,13 @@
 <?php
 // Info vars
-$cache_date			= current_time( 'd.m.Y', true ); //@todo Replace with real cache date
-$rating_text		= $this->get_parent()->api->get_rating_text( $summary->ratingValue );
-$rating_stars		= $this->get_parent()->api->get_rating_stars( $summary->ratingValue );
-$rating_percentage 	= $this->get_parent()->api->get_rating_percentage( $summary->ratingValue );
-$icon_logo			= $this->get_parent()->icon->get( 'logo' );
+$cache_date			    = current_time( 'd.m.Y', true ); //@todo Replace with real cache date
+$rating_text		    = $this->get_parent()->api->get_rating_text( $summary->ratingValue );
+$rating_stars		    = $this->get_parent()->api->get_rating_stars( $summary->ratingValue );
+$rating_percentage 	    = $this->get_parent()->api->get_rating_percentage( $summary->ratingValue );
+$icon_logo			    = $this->get_parent()->icon->get( 'logo' );
 
-$latest_rating      = array( 'created' => 631152000 );
+$latest_rating          = new stdClass();
+$latest_rating->created = 631152000;
 
 foreach ( get_object_vars( $ratings ) as $rating ) {
     if (
