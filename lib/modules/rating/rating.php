@@ -8,7 +8,9 @@ class rating extends modules {
 			 ->create_widget();
 		
 		// Shortcodes
-		add_shortcode( $this->get_root()->get_prefix( $this->get_module_name() ), array( $this, 'shortcode' ) );
+		add_shortcode( 'sv_provenexpert', array( $this, 'shortcode' ) );
+		// Legacy
+		add_shortcode( 'sv_proven_expert', array( $this, 'shortcode' ) );
 	}
 	
 	protected function load_settings(): rating {
