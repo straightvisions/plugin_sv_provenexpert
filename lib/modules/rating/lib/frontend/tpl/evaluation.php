@@ -23,7 +23,7 @@ $icon_logo			    = $this->get_parent()->icon->get( 'logo_white' );
 $icon_user				= $this->get_parent()->icon->get( 'user' );
 ?>
 
-<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'recommend' ); ?>">
+<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'evaluation' ); ?>">
     <div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
         <div class="<?php echo $this->get_prefix( 'header' ); ?>">
             <div class="<?php echo $this->get_prefix( 'logo' ); ?>">

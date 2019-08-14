@@ -1,0 +1,211 @@
+/* Common */
+.sv_provenexpert_modules_rating_seal_slider {
+	position: relative;
+	width: 100%;
+	height: auto;
+	max-width: 250px !important;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #444444;
+	padding: 0 !important;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper,
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper > div,
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper > div > * {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper,
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper > div {
+	flex-direction: column;
+	background-color: #ffffff;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper {
+	position: relative;
+	z-index: 2;
+	border: 2px solid #e9e6de;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper > div > * {
+	padding-left: 15px;
+	padding-right: 15px;
+	justify-content: center;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_logo > svg,
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_stars > svg {
+	display: block;
+	height: auto;
+	width: auto;
+}
+
+/* Header - Company */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_company {
+	height: 45px;
+	text-align: center;
+	line-height: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 600;
+}
+
+/* Header - Logo */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_logo {
+	height: 35px;
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+	background-color: #444444;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_logo > a {
+	display: flex;
+}
+
+/* Header - Description */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_desc {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: #0db1cd;
+	line-height: 100%;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+/* Body - Stars */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_stars {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_stars > svg {
+	width: 32px;
+	height: 32px;
+	margin: 0 5px;
+	fill: #c8b274;
+}
+
+/* Body - Text */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_text {
+	font-size: 26px;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+	font-weight: 700;
+}
+
+/* Body - Recommendation */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_recommendation {
+	font-size: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #c8b274;
+	border-top: 1px solid #e9e6de;
+}
+
+/* Footer */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_footer {
+	padding-top: 15px;
+	border-top: 1px solid #e9e6de;
+	background-color: #fbfaf9;
+}
+
+/* Footer - Reviews */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_reviews > a {
+	font-size: 14px;
+	color: #0db1cd;
+	padding-bottom: 5px;
+	text-decoration: none;
+}
+
+/* Footer - Meta */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_wrapper > div > .sv_provenexpert_modules_rating_meta {
+	justify-content: space-between;
+	font-size: 12px;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_meta .sv_provenexpert_modules_rating_more_info > a {
+	text-decoration: none;
+	color: #0db1cd;
+}
+
+/* Latest Comment */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_latest_comment {
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	left: 0;
+	width: 250px;
+	background-color: #ffffff;
+	border-width: 2px 2px 2px 0;
+	border-style: solid;
+	border-color: #e9e6de;
+	transition: left .5s ease-in-out;
+}
+
+.sv_provenexpert_modules_rating_seal_slider:hover .sv_provenexpert_modules_rating_latest_comment,
+.sv_provenexpert_modules_rating_seal_slider:focus .sv_provenexpert_modules_rating_latest_comment {
+	left: 100%;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_latest_comment .sv_provenexpert_modules_rating_header {
+	height: 35px;
+	background-color: #0db1cd;
+	padding: 5px 15px;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_latest_comment .sv_provenexpert_modules_rating_body {
+	padding: 15px 15px 5px 15px;
+}
+
+/* Last Comment */
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_comment {
+	border: 1px solid #c3c3c3;
+	padding: 5px 10px;
+	font-size: 12px;
+	color: #444444;
+	border-radius: 5px;
+	font-style: italic;
+	max-width: 100%;
+	width: 100%;
+	max-height: 150px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	line-height: 150%;
+	font-weight: 400;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_comment::-webkit-scrollbar {
+	width: 3px;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_comment::-webkit-scrollbar-track {
+	background: #e2e2e2;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_comment::-webkit-scrollbar-thumb {
+	border: 1px solid #c3c3c3;
+	background: #c3c3c3;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_latest_comment .sv_provenexpert_modules_rating_footer {
+	padding: 5px 15px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_latest_comment .sv_provenexpert_modules_rating_read_more > a {
+	color: #0db1cd;
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: 600;
+}

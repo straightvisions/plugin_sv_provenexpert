@@ -24,7 +24,7 @@ $icon_check				= $this->get_parent()->icon->get( 'check' );
 $icon_user				= $this->get_parent()->icon->get( 'user' );
 ?>
 
-<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'rating_widget' ); ?>">
+<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'evaluation_large' ); ?>">
     <div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
         <div class="<?php echo $this->get_prefix( 'header' ); ?>">
             <div class="<?php echo $this->get_prefix( 'logo' ); ?>">

@@ -20,7 +20,7 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 }
 ?>
 
-<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'line' ); ?>">
+<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'seal_seperator' ); ?>">
 	<div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
 		<div class="<?php echo $this->get_prefix( 'logo' ); ?>">
 			<a href="<?php echo $profile->profileUrl; ?>" target="_blank">

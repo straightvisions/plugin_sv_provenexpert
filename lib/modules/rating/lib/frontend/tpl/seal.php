@@ -5,22 +5,9 @@ $rating_text		= $this->get_parent()->api->get_rating_text( $summary->ratingValue
 $rating_stars		= $this->get_parent()->api->get_rating_stars( $summary->ratingValue );
 $rating_percentage 	= $this->get_parent()->api->get_rating_percentage( $summary->ratingValue );
 $icon_logo			= $this->get_parent()->icon->get( 'logo_white' );
-
-$latest_rating          = new stdClass();
-$latest_rating->created = 631152000;
-
-foreach ( get_object_vars( $ratings ) as $rating ) {
-    if (
-        isset( $rating->feedback )
-        && round( $rating->ratingValue ) >= 4
-        && $rating->created >= $latest_rating->created
-    ) {
-        $latest_rating = $rating;
-    }
-}
 ?>
 
-<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'slide' ); ?>">
+<div class="<?php echo $this->get_prefix() . ' ' . $this->get_prefix( 'seal' ); ?>">
 	<div class="<?php echo $this->get_prefix( 'wrapper' ); ?>">
 		<div class="<?php echo $this->get_prefix( 'header' ); ?>">
 			<div class="<?php echo $this->get_prefix( 'company' ); ?>">
@@ -65,23 +52,6 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 			</div>
 		</div>
 	</div>
-    <div class="<?php echo $this->get_prefix( 'latest_comment' ); ?>">
-        <div class="<?php echo $this->get_prefix( 'header' ); ?>">
-            <?php _e( 'Kunden sagen:' ); ?>
-        </div>
-        <div class="<?php echo $this->get_prefix( 'body' ); ?>">
-            <div class="<?php echo $this->get_prefix( 'comment' ); ?>">
-				<?php echo $latest_rating->feedback; ?>
-            </div>
-        </div>
-        <div class="<?php echo $this->get_prefix( 'footer' ); ?>">
-            <div class="<?php echo $this->get_prefix( 'read_more' ); ?>">
-                <a href="<?php echo $profile->profileUrl; ?>" target="_blank">
-					<?php _e( 'Mehr lesen >', 'sv_provenexpert' ); ?>
-                </a>
-            </div>
-        </div>
-    </div>
 </div>
 
 
