@@ -98,11 +98,17 @@ class api extends modules {
 		$api_id 		= $this->get_setting( 'api_id' )->run_type()->get_data();
 		$api_key		= $this->get_setting( 'api_key' )->run_type()->get_data();
 		$request_url 	= $this->get_request_url( $service, $function );
+		$request_data	= array(
+			'proxyUser' 	=> array(
+				'email' 	=> 'billing@straightvisions.com',
+			)
+		);
 		$request_args 	= array(
 			'method' 	=> 'POST',
 			'headers' 	=> array(
 				'Authorization' => 'Basic ' . base64_encode( $api_id . ':' . $api_key ),
 			),
+			'body'		=> json_encode( $request_data ),
 		);
 		
 		$remote_get = $this->get_root()::$remote_get->create( $this )
