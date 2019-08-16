@@ -108,6 +108,8 @@
 .sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_stars > svg {
 	margin: 0 2.5px;
 	fill: #c8b274;
+	height: 22px;
+	width: 22px;
 }
 
 /* Body - Compare */
