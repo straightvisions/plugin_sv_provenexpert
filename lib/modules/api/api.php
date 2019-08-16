@@ -94,14 +94,15 @@ class api extends modules {
 	}
 	
 	// Methods for sending requests to the PE API
-	protected function send_request( string $service, string $function ) {
+	protected function send_request( array $args ) {
 		$api_id 		= $this->get_setting( 'api_id' )->run_type()->get_data();
 		$api_key		= $this->get_setting( 'api_key' )->run_type()->get_data();
-		$request_url 	= $this->get_request_url( $service, $function );
+		$request_url 	= $this->get_request_url( $args['service'], $args['function'] );
 		$request_data	= array(
 			'proxyUser' 	=> array(
 				'email' 	=> 'billing@straightvisions.com',
-			)
+			),
+			'filter'		=> $args['filter'],
 		);
 		$request_args 	= array(
 			'method' 	=> 'POST',
@@ -119,19 +120,43 @@ class api extends modules {
 		return json_decode( $remote_get->get_response_body() );
 	}
 	
-	public function request_get( $service = 'auth/url' ) {
-		return $this->send_request( $service, 'get' );
+	public function request_get( $service = 'auth/url', $filter = array() ) {
+		$args = array(
+			'service'	=> $service,
+			'function'	=> 'get',
+			'filter'	=> $filter,
+		);
+		
+		return $this->send_request( $args );
 	}
 	
-	public function request_create( $service = 'auth/url' ) {
-		return $this->send_request( $service, 'create' );
+	public function request_create( $service = 'auth/url', $filter = array() ) {
+		$args = array(
+			'service'	=> $service,
+			'function'	=> 'create',
+			'filter'	=> $filter,
+		);
+		
+		return $this->send_request( $args );
 	}
 	
-	public function request_update( $service = 'auth/url' ) {
-		return $this->send_request( $service, 'update' );
+	public function request_update( $service = 'auth/url', $filter = array() ) {
+		$args = array(
+			'service'	=> $service,
+			'function'	=> 'update',
+			'filter'	=> $filter,
+		);
+		
+		return $this->send_request( $args );
 	}
 	
-	public function request_children( $service = 'auth/url' ) {
-		return $this->send_request( $service, 'children' );
+	public function request_children( $service = 'auth/url', $filter = array() ) {
+		$args = array(
+			'service'	=> $service,
+			'function'	=> 'children',
+			'filter'	=> $filter,
+		);
+		
+		return $this->send_request( $args );
 	}
 }
