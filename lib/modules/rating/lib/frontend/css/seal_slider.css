@@ -144,15 +144,31 @@
 	left: 0;
 	width: 250px;
 	background-color: #ffffff;
-	border-width: 2px 2px 2px 0;
+	border-width: 2px 2px 2px 2px;
 	border-style: solid;
 	border-color: #e9e6de;
-	transition: left .5s ease-in-out;
+	transition: left .5s ease-in-out, top .5s ease-in-out;
+}
+
+
+@media ( min-width: 800px ) {
+	.sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_latest_comment {
+		border-width: 2px 2px 2px 0;
+	}
 }
 
 .sv_provenexpert_modules_rating_seal_slider:hover .sv_provenexpert_modules_rating_latest_comment,
 .sv_provenexpert_modules_rating_seal_slider:focus .sv_provenexpert_modules_rating_latest_comment {
-	left: 100%;
+	top: 100%;
+	left: 0;
+}
+
+@media ( min-width: 800px ) {
+	.sv_provenexpert_modules_rating_seal_slider:hover .sv_provenexpert_modules_rating_latest_comment,
+	.sv_provenexpert_modules_rating_seal_slider:focus .sv_provenexpert_modules_rating_latest_comment {
+		left: 100%;
+		top: 45px;
+	}
 }
 
 .sv_provenexpert_modules_rating_seal_slider .sv_provenexpert_modules_rating_latest_comment .sv_provenexpert_modules_rating_header {
