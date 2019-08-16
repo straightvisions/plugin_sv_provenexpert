@@ -1,15 +1,10 @@
 <?php
 // Info vars
-$latest_rating          = new stdClass();
-$latest_rating->created = 631152000;
+$latest_ratings          = array();
 
 foreach ( get_object_vars( $ratings ) as $rating ) {
-    if (
-        isset( $rating->feedback )
-        && round( $rating->ratingValue ) >= 4
-        && $rating->created >= $latest_rating->created
-    ) {
-        $latest_rating = $rating;
+    if ( isset( $rating->feedback ) && round( $rating->ratingValue ) >= 4 ) {
+        $latest_ratings[] = $rating;
     }
 }
 
@@ -81,15 +76,17 @@ $icon_user				= $this->get_parent()->icon->get( 'user' );
             </div>
             <div class="<?php echo $this->get_prefix( 'latest_comments' ); ?>">
                 <?php
-                    for ( $i = 0; $i < 3; $i++ ) {
-                    ?>
-                    <div class="
-                    <?php
-                        echo $this->get_prefix( 'comment' );
-                        echo $i === 0 ? ' active' : '';
-                    ?>
-                    " data-rating="<?php echo $i + 1; ?>">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
-                    <?php
+                    for ( $i = 0; $i < count( $latest_ratings ); $i++ ) {
+                        if ( $i !== 4 ) {
+							?>
+                            <div class="
+                        <?php
+								echo $this->get_prefix( 'comment' );
+								echo $i === 0 ? ' active' : '';
+							?>
+                        " data-rating="<?php echo $i + 1; ?>"><?php echo $latest_ratings[ $i ]->feedback; ?></div>
+							<?php
+						}
                     }
                 ?>
             </div>

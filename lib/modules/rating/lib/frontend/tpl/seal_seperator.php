@@ -5,17 +5,12 @@ $rating_text		    = $this->get_parent()->api->get_rating_text( $summary->ratingV
 $rating_stars		    = $this->get_parent()->api->get_rating_stars( $summary->ratingValue );
 $rating_percentage 	    = $this->get_parent()->api->get_rating_percentage( $summary->ratingValue );
 $icon_logo			    = $this->get_parent()->icon->get( 'logo' );
-
-$latest_rating          = new stdClass();
-$latest_rating->created = 631152000;
+	
+$latest_ratings          = array();
 
 foreach ( get_object_vars( $ratings ) as $rating ) {
-    if (
-        isset( $rating->feedback )
-        && round( $rating->ratingValue ) >= 4
-        && $rating->created >= $latest_rating->created
-    ) {
-        $latest_rating = $rating;
+    if ( isset( $rating->feedback ) && round( $rating->ratingValue ) >= 4 ) {
+        $latest_ratings[] = $rating;
     }
 }
 ?>
@@ -46,7 +41,7 @@ foreach ( get_object_vars( $ratings ) as $rating ) {
 		</div>
 		<div class="<?php echo $this->get_prefix( 'latest_comment' ); ?>">
 			<div class="<?php echo $this->get_prefix( 'comment' ); ?>">
-				<?php echo $latest_rating->feedback; ?>
+				<?php echo $latest_ratings[0]->feedback; ?>
 			</div>
 		</div>
 		<div class="<?php echo $this->get_prefix( 'more_info' ); ?>">

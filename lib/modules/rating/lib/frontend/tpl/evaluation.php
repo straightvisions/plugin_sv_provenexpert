@@ -1,16 +1,11 @@
 <?php
 // Info vars
-$latest_rating          = new stdClass();
-$latest_rating->created = 631152000;
+$latest_ratings          = array();
 
 foreach ( get_object_vars( $ratings ) as $rating ) {
-	if (
-		isset( $rating->feedback )
-		&& round( $rating->ratingValue ) >= 4
-		&& $rating->created >= $latest_rating->created
-	) {
-		$latest_rating = $rating;
-	}
+    if ( isset( $rating->feedback ) && round( $rating->ratingValue ) >= 4 ) {
+        $latest_ratings[] = $rating;
+    }
 }
 
 $cache_date			    = current_time( 'd.m.Y', true ); //@todo Replace with real cache date
@@ -73,7 +68,7 @@ $icon_user				= $this->get_parent()->icon->get( 'user' );
         <div class="<?php echo $this->get_prefix( 'footer' ); ?>">
 			<div class="<?php echo $this->get_prefix( 'latest_comment' ); ?>">
 				<div class="<?php echo $this->get_prefix( 'comment' ); ?>">
-					<?php echo $latest_rating->feedback; ?>
+					<?php echo $latest_ratings[0]->feedback; ?>
 				</div>
 			</div>
         </div>
