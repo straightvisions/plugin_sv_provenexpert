@@ -7,7 +7,6 @@
 	font-size: 16px;
 	font-weight: 600;
 	color: #0db1cd;
-	seal_seperator-height: 100%;
 	padding: 0 !important;
 	box-shadow: 0 -2px 2px #e4e4e4;
 	border-top: 1px solid #d3d3d3;
@@ -20,6 +19,16 @@
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div > * {
 	display: flex;
 	align-items: center;
+}
+
+.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper {
+	flex-direction: column;
+}
+
+@media ( min-width: 350px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper {
+		flex-direction: row;
+	}
 }
 
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper,
@@ -38,17 +47,19 @@
 	align-items: center;
 }
 
-.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > *::before {
-	content: ' ';
-	display: inseal_seperator-block;
-	height: 30px;
-	width: 1px;
-	margin: 0 10px;
-	background-color: #c8b274;
-}
+@media ( min-width: 350px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > *::before {
+		content: ' ';
+		display: block;
+		height: 30px;
+		width: 1px;
+		margin: 0 10px;
+		background-color: #c8b274;
+	}
 
-.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > *:first-child::before {
-	display: none;
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > *:first-child::before {
+		display: none;
+	}
 }
 
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_logo > svg,
@@ -61,6 +72,13 @@
 /* Logo */
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_logo {
 	background-color: #444444;
+	margin-bottom: 5px;
+}
+
+@media ( min-width: 350px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_logo {
+		margin-bottom: 0;
+	}
 }
 
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_logo > a {
@@ -68,15 +86,42 @@
 }
 
 /* Reviews */
+.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_reviews {
+	display: none;
+}
+
+@media ( min-width: 550px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_reviews {
+		display: flex;
+	}
+}
+
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_reviews > a {
 	text-decoration: none;
 	color: #0db1cd;
 }
 
 /* Rating Stars */
+.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_stars_and_text {
+	flex-direction: column;
+}
+
+@media ( min-width: 350px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_stars_and_text {
+		flex-direction: row;
+	}
+}
+
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_stars {
 	display: flex;
 	justify-content: space-evenly;
+	margin-bottom: 2.5px;
+}
+
+@media ( min-width: 350px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_stars {
+		margin-bottom: 0;
+	}
 }
 
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_stars > svg {
@@ -93,11 +138,29 @@
 }
 
 /* Recommendation */
-.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_recommendation {
+.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_recommendation {
+	display: none;
 	font-weight: 400;
 }
 
+@media ( min-width: 810px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_recommendation {
+		display: flex;
+	}
+
+}
+
 /* Last Comment */
+.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_latest_comment {
+	display: none;
+}
+
+@media ( min-width: 1080px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_latest_comment {
+		display: flex;
+	}
+}
+
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_comment {
 	border: 1px solid #c3c3c3;
 	padding: 5px 10px;
@@ -111,7 +174,7 @@
 	min-width: 150px;
 	overflow-y: hidden;
 	overflow-x: auto;
-	seal_seperator-height: 30px;
+	height: 30px;
 	width: auto;
 	white-space: nowrap;
 }
@@ -130,6 +193,16 @@
 }
 
 /* More Info */
+.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_more_info {
+	display: none;
+}
+
+@media ( min-width: 640px ) {
+	.sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_wrapper > div.sv_provenexpert_modules_rating_more_info {
+		display: flex;
+	}
+}
+
 .sv_provenexpert_modules_rating_seal_seperator .sv_provenexpert_modules_rating_more_info > a {
 	text-decoration: none;
 	color: #0db1cd;
