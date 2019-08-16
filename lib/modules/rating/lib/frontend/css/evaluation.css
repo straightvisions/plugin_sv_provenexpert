@@ -38,6 +38,19 @@
 /* Header - Description */
 .sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_desc {
 	margin-left: 15px;
+	display: none;
+}
+
+/* Header - Date */
+.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_date {
+	display: none;
+}
+
+@media ( min-width: 490px ) {
+	.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_desc,
+	.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_date {
+		display: block;
+	}
 }
 
 /* Header - More Info */
@@ -49,8 +62,15 @@
 /* Body */
 .sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_body {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	padding: 15px 15px 0 15px;
+}
+
+@media ( min-width: 460px ) {
+	.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_body {
+		flex-direction: row;
+	}
 }
 
 .sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_body > div {
@@ -58,6 +78,13 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 15px;
+}
+
+@media ( min-width: 460px ) {
+	.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_body > div {
+		margin-bottom: 0;
+	}
 }
 
 /* Body - Quality Badge */
@@ -102,17 +129,17 @@
 }
 
 /* Body - evaluationation */
-.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_evaluationation {
+.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_recommendation {
 	color: #c8b274;
 	line-height: 130%;
 }
 
-.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_evaluationation > div:first-of-type {
+.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_recommendation > div:first-of-type {
 	font-size: 20px;
 	font-weight: 600;
 }
 
-.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_evaluationation > svg {
+.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_recommendation > svg {
 	width: auto;
 	height: auto;
 	min-height: 65px;
