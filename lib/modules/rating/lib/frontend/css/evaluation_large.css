@@ -267,12 +267,13 @@
 	display: none;
 	padding: 10px 15px;
 }
-
+/* @todo Disabled due to missing info
 @media ( min-width: 720px ) {
 	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_footer {
 		display: flex;
 	}
 }
+*/
 
 /* Footer - Title */
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_title {
