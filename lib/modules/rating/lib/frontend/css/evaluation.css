@@ -56,6 +56,7 @@
 /* Header - More Info */
 .sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_more_info > a {
 	color: #0db1cd;
+	font-size: 12px;
 	text-decoration: none;
 }
 
@@ -128,10 +129,17 @@
 	font-size: 14px;
 }
 
-/* Body - evaluationation */
-.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_recommendation {
+/* Body - Recommendation */
+.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_body > div.sv_provenexpert_modules_rating_recommendation {
 	color: #c8b274;
 	line-height: 130%;
+	display: none;
+}
+
+@media ( min-width: 460px ) {
+	.sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_body > div.sv_provenexpert_modules_rating_recommendation {
+		display: flex;
+	}
 }
 
 .sv_provenexpert_modules_rating_evaluation .sv_provenexpert_modules_rating_recommendation > div:first-of-type {

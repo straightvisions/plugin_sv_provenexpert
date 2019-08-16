@@ -10,10 +10,15 @@
 	line-height: 100%;
 }
 
-.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_wrapper,
-.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_info {
+.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_wrapper {
 	border: 1px solid #e5e4e3;
 	background-color: #ffffff;
+}
+
+@media ( min-width: 720px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_info {
+		border: 1px solid #e5e4e3;
+	}
 }
 
 /* Header */
@@ -26,6 +31,13 @@
 	font-weight: 600;
 	background-color: #444444;
 	border-bottom: 2px solid #0db1cd;
+	justify-content: center;
+}
+
+@media ( min-width: 400px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_header {
+		justify-content: inherit;
+	}
 }
 
 /* Header - Logo */
@@ -36,6 +48,13 @@
 /* Header - Description */
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_desc {
 	margin-left: 15px;
+	display: none;
+}
+
+@media ( min-width: 400px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_desc {
+		display: block;
+	}
 }
 
 /* Body */
@@ -50,6 +69,16 @@
 }
 
 /* Body - Avatar */
+.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_avatar {
+	display: none;
+}
+
+@media ( min-width: 540px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_avatar {
+		display: block;
+	}
+}
+
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_avatar > a > img {
 	width: auto;
 	height: auto;
@@ -65,6 +94,10 @@
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_info > div {
 	display: flex;
 	align-items: center;
+}
+
+.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_info {
+	justify-content: space-evenly;
 }
 
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_info > div {
@@ -112,16 +145,23 @@
 }
 
 /* Body - evaluation_largeation */
-.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_evaluation_largeation {
+.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_info > div.sv_provenexpert_modules_rating_recommendation {
 	color: #c8b274;
 	line-height: 130%;
+	display: none;
 }
 
-.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_evaluation_largeation > div:first-child {
+@media ( min-width: 400px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_info > div.sv_provenexpert_modules_rating_recommendation {
+		display: flex;
+	}
+}
+
+.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_recommendation > div:first-child {
 	font-size: 24px;
 }
 
-.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_evaluation_largeation > svg {
+.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_recommendation > svg {
 	width: auto;
 	height: auto;
 	min-height: 65px;
@@ -135,6 +175,13 @@
 	align-items: flex-start;
 	justify-content: space-between;
 	height: 100%;
+	display: none;
+}
+
+@media ( min-width: 720px ) {
+	.sv_provenexpert_modules_rating_evaluation_large div.sv_provenexpert_modules_rating_service {
+		display: flex;
+	}
 }
 
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_service > div {
@@ -173,6 +220,13 @@
 	line-height: 150%;
 	font-weight: 400;
 	margin-left: 15px;
+	display: none;
+}
+
+@media ( min-width: 950px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_latest_comments {
+		display: block;
+	}
 }
 
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_latest_comments::-webkit-scrollbar {
@@ -208,8 +262,14 @@
 
 /* Footer */
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_footer {
-	display: flex;
+	display: none;
 	padding: 10px 15px;
+}
+
+@media ( min-width: 720px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_footer {
+		display: flex;
+	}
 }
 
 /* Footer - Title */
@@ -240,10 +300,21 @@
 /* Footer - More Info */
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_more_info {
 	max-width: 220px;
-	width: 100%;
 	margin-left: 15px;
-	display: flex;
 	justify-content: flex-end;
+	display: none;
+}
+
+@media ( min-width: 800px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_more_info {
+		display: flex;
+	}
+}
+
+@media ( min-width: 950px ) {
+	.sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_more_info {
+		width: 100%;
+	}
 }
 
 .sv_provenexpert_modules_rating_evaluation_large .sv_provenexpert_modules_rating_more_info > a {
