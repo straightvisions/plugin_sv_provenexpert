@@ -11,6 +11,22 @@ class rating extends modules {
 		add_shortcode( 'sv_provenexpert', array( $this, 'shortcode' ) );
 		// Legacy
 		add_shortcode( 'sv_proven_expert', array( $this, 'shortcode' ) );
+
+		add_action('wp_footer', function(){
+echo '<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "WebPage",
+	"lastReviewed": "2019-06-13",
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingCount": "129",
+		"ratingValue": "4.98"
+	}
+}
+</script>';
+});
+
 	}
 	
 	protected function load_settings(): rating {
@@ -81,7 +97,7 @@ class rating extends modules {
 			$settings,
 			$this->get_root()->get_prefix()
 		);
-		
+
 		return $this->router( $settings );
 	}
 	
@@ -89,7 +105,7 @@ class rating extends modules {
 		if ( ! file_exists( $this->get_path( 'lib/frontend/tpl/' . $settings['template'] . '.php' ) ) ) {
 			$settings['template'] = 'default';
 		}
-		
+
 		$this->get_script( $settings['template'] )
 			 ->set_inline( $settings['inline'] )
 			 ->set_is_enqueued();
@@ -100,7 +116,7 @@ class rating extends modules {
 					 ->set_is_enqueued();
 				break;
 		}
-		
+
 		$summary 	= $this->get_parent()->api->request_get( 'rating/summary' );
 		
 		//@todo Below is original
@@ -172,7 +188,7 @@ Persönlich kann ich jeden Herrn Dr. Baumhöfener empfehlen, wenn es um Revision
 
 		ob_start();
 		
-		require_once( $this->get_path( 'lib/frontend/tpl/' . $settings['template'] . '.php' ) );
+		require( $this->get_path( 'lib/frontend/tpl/' . $settings['template'] . '.php' ) );
 		$output = ob_get_contents();
 		
 		ob_end_clean();

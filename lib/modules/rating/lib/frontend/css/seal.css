@@ -3,8 +3,7 @@
 	width: 100%;
 	height: auto;
 	max-width: 250px !important;
-	font-family: 'Titillium Web', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 400;
 	color: #444444;
 	padding: 0 !important;
@@ -43,7 +42,6 @@
 
 /* Header - Company */
 .sv_provenexpert_modules_rating_seal .sv_provenexpert_modules_rating_company {
-	height: 45px;
 	text-align: center;
 	line-height: 100%;
 	padding-top: 10px;
