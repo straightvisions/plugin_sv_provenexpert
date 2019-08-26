@@ -107,7 +107,7 @@ class rating extends modules {
 
 		ob_start();
 		
-		require_once( $this->get_path( 'lib/frontend/tpl/' . $settings['template'] . '.php' ) );
+		require( $this->get_path( 'lib/frontend/tpl/' . $settings['template'] . '.php' ) );
 		$output = ob_get_contents();
 		
 		ob_end_clean();
