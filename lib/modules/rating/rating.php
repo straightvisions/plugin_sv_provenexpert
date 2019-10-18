@@ -16,11 +16,12 @@ class rating extends modules {
 echo '<script type="application/ld+json">
 {
 	"@context": "http://schema.org/",
-	"@type": "WebPage",
-	"lastReviewed": "2019-06-13",
+	"@type": "Organization",
+	"@id": "https://www.provenexpert.com/de-de/strafverteidigung-fachanwalt-fuer-strafrecht-dr-baumhoefener/",
+	"name": "Strafverteidigung: Fachanwalt für Strafrecht Dr. Baumhöfener",
 	"aggregateRating": {
 		"@type": "AggregateRating",
-		"ratingCount": "129",
+		"ratingCount": "131",
 		"ratingValue": "4.98"
 	}
 }
