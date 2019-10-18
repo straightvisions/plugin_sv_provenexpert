@@ -12,22 +12,21 @@
 			if( get_transient( 'sv_provenexpert' ) ) {
 				$data										= get_transient( 'sv_provenexpert' );
 			} elseif( strlen( $settings['api_id']->run_type()->get_data() ) > 0 && strlen( $settings['api_key']->run_type()->get_data() ) > 0 ) {
-				$curl = $this->get_parent()::$curl->create( $this );
+				$curl = $this->get_parent()::$remote_get->create( $this );
+				
+				$auth = base64_encode( trim( $settings['api_id']->run_type()->get_data() ) . ':' . trim( $settings['api_key']->run_type()->get_data() ) );
 
 				$curl
-					->set_url( 'https://www.provenexpert.com/api_rating_v2.json?v=' . $this->get_version_core() )
-					->set_timeout( 3 )
-					->set_returntransfer( true )
-					->set_ssl_verifypeer( false )
-					->set_userpwd( trim( $settings['api_id']->run_type()->get_data() ) . ':' . trim( $settings['api_key']->run_type()->get_data() ) );
-
-				if( defined( 'CURLOPT_IPRESOLVE' ) && defined( 'CURL_IPRESOLVE_V4' ) ) {
-					$curl->set_ipresolve( CURL_IPRESOLVE_V4 );
-				}
-
-				$json										= curl_exec( $curl->get_handler() );
-
-				curl_close( $curl->get_handler() );
+					->set_request_url( 'https://www.provenexpert.com/api_rating_v2.json?v=' . $this->get_version_core().'&id=straightvisions&type=wordpress-plugin' )
+					->set_args(array(
+						'timeout'		=> 3,
+						'sslverify'		=> false,
+						'headers'		=> array(
+							'Authorization' => 'Basic '.$auth
+						)
+					) );
+				
+				$json										= $curl->get_response_body();
 
 				// convert json to array
 				$data										= json_decode( $json, true );

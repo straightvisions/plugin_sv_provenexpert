@@ -6,8 +6,8 @@ if(!class_exists('\sv_core\core_plugin')) {
 }
 
 class init extends \sv_core\core_plugin {
-	const version = 1401;
-	const version_core_match = 4013;
+	const version = 1403;
+	const version_core_match = 4017;
 
 	public function load(){
 		if(!$this->setup( __NAMESPACE__, __FILE__ )){
@@ -26,11 +26,13 @@ class init extends \sv_core\core_plugin {
 			$settings = $this->modules->common_settings->get_settings();
 			$options  = get_option( 'sv_proven_expert' );
 
-			foreach ( $options['basic'] as $key => $option ) {
-				if ( $key == 'API_ID' && isset( $option['value'] ) ) {
-					$settings['api_id']->run_type()->set_data( $option['value'] )->save_option();
-				} else if ( $key == 'API_KEY' && isset( $option['value'] ) ) {
-					$settings['api_key']->run_type()->set_data( $option['value'] )->save_option();
+			if($options && isset($options['basic'])) {
+				foreach ( $options['basic'] as $key => $option ) {
+					if ( $key == 'API_ID' && isset( $option['value'] ) ) {
+						$settings['api_id']->run_type()->set_data( $option['value'] )->save_option();
+					} else if ( $key == 'API_KEY' && isset( $option['value'] ) ) {
+						$settings['api_key']->run_type()->set_data( $option['value'] )->save_option();
+					}
 				}
 			}
 

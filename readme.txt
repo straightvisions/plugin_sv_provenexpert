@@ -1,11 +1,11 @@
 === SV Proven Expert ===
-Contributors: matthias-reuter
+Contributors: matthias-reuter, matthiasbathke
 Donate link: https://straightvisions.com
 Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, google star reviews
 Requires PHP: 7.0
 Requires at least: 4.7
-Tested up to: 5.2
-Stable tag: 1.4.01
+Tested up to: 5.2.4
+Stable tag: 1.4.03
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -70,6 +70,10 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
+= 1.4.03 =
+* fix error notice
+* core update
+
 = 1.3.14 =
 * core update
 
@@ -115,48 +119,9 @@ Initial Release
 
 == Upgrade Notice ==
 
-= 1.3.14 =
+= 1.4.03 =
+* fix error notice
 * core update
-
-= 1.3.1 =
-* core update
-* Bugfix: Remove obsolete Settings from Widgets
-
-= 1.3.0 =
-* core update
-* Bugfix: Widget Loading
-
-= 1.0.9 =
-* core update
-
-= 1.0.8 =
-* core update
-
-= 1.0.7 =
-* support added for legacy shortcode
-
-= 1.0.6 =
-* PHP 7.1 and higher Support: Bugfix for Fatal error: Cannot use lexical variable $widget_class as a parameter name in /wp-content/plugins/sv-provenexpert/lib/core/widgets/widgets.php on line 127
-* Decrease Admin Menu priority
-* highlight shortcode in settings
-
-= 1.0.5 =
-Major Refactoring
-
-= 1.0.4 =
-Preview and Error Output added on settings screen. Usability in settings field styles improved.
-
-= 1.0.3 =
-Fixed a W3C HTML Validation Markup Error generated through HTML Snippet retrieved from Proven Expert
-
-= 1.0.2 =
-Curl Decoding Error fixed
-
-= 1.0.1 =
-Improved Caching
-
-= 1.0 =
-Initial Release
 
 == Missing a feature? ==
 
