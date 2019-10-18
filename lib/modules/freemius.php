@@ -7,21 +7,8 @@ class freemius extends init {
 	}
 
 	public function init() {
-		if ( $this->is_parent_active_and_loaded() ) {
-			// Init Freemius.
-			$this->load_sdk();
-
-			// Signal that the add-on's SDK was initiated.
-			do_action( 'sv_provenexpert_freemius_loaded' );
-
-			// Parent is active, add your init code here.
-		} else if ( $this->is_parent_active() ) {
-			// Init add-on only after the parent is loaded.
-			add_action( 'sv100_companion_freemius_loaded', array($this, 'init') );
-		} else {
-			// Even though the parent is not activated, execute add-on for activation / uninstall hooks.
-			$this->load_sdk();
-		}
+		// Init Freemius.
+		$this->load_sdk();
 	}
 	public function load_sdk() {
 		global $sv_provenexpert_freemius;
@@ -33,21 +20,22 @@ class freemius extends init {
 			'public_key'          => 'pk_be2dc70708b2b697d780812ca1e2c',
 			'is_premium'          => false,
 			'has_paid_plans'      => false,
-			'parent'              => array(
+			/*'parent'              => array(
 				'id'         => '4082',
 				'slug'       => 'sv100-companion',
 				'public_key' => 'pk_bb203616096bc726f69ca51a0bbe3',
 				'name'       => 'SV100 Companion',
-			),
+			),*/
 			'menu'                => array(
-				'slug'           => 'sv-provenexpert',
+				'slug'           => 'sv_provenexpert',
 				'account'        => false,
-				'support'        => false,
 				'parent'         => array(
 					'slug' => 'straightvisions',
 				),
 			),
 		) );
+		
+		do_action( 'sv_provenexpert_freemius_loaded' );
 
 		return $sv_provenexpert_freemius;
 	}
