@@ -6,16 +6,22 @@ if(!class_exists('\sv_core\core_plugin')) {
 }
 
 class init extends \sv_core\core_plugin {
-	const version = 1403;
-	const version_core_match = 4017;
+	const version = 1404;
+	const version_core_match = 4019;
 
 	public function load(){
 		if(!$this->setup( __NAMESPACE__, __FILE__ )){
 			return false;
 		}
 
-		$this->set_section_title( __( 'SV ProvenExpert', $this->get_root()->get_prefix() ) );
-		$this->set_section_desc( __( 'This plugin is build to show review stars retrieved via ProvenExpert on your site – additionally this enables review stars of your website’s entries in Google’s search engine result pages.', $this->get_root()->get_prefix() ) );
+		$info = get_file_data($this->get_path($this->get_name().'.php'), array(
+			'name'	=> 'Plugin Name',
+			'desc'	=> 'Description'
+		));
+
+		$this->set_section_title( $info['name'] );
+		$this->set_section_desc( $info['desc'] );
+
 		$this->set_section_privacy( '<p>
 				' . $this->get_section_title() . ' does not collect or share any data from clients or visitors.<br />
 				' . $this->get_section_title() . ' connects to the server of <a href="https://www.provenexpert.com/de/pa281/" target="_blank">ProvenExpert</a> and only sends the given API ID and API Key, to receive the rating for that account.
