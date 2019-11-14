@@ -70,6 +70,9 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
+= 1.4.04 =
+* core update
+
 = 1.4.03 =
 * fix error notice
 * core update
@@ -119,8 +122,7 @@ Initial Release
 
 == Upgrade Notice ==
 
-= 1.4.03 =
-* fix error notice
+= 1.4.04 =
 * core update
 
 == Missing a feature? ==
