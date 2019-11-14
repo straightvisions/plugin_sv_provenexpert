@@ -1,11 +1,11 @@
 === SV Proven Expert ===
-Contributors: matthias-reuter, matthiasbathke
+Contributors: matthias-reuter, matthiasbathke, dennisheiden, adrianchudzynski
 Donate link: https://straightvisions.com
 Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, google star reviews
 Requires PHP: 7.0
 Requires at least: 4.7
-Tested up to: 5.2.4
-Stable tag: 1.4.03
+Tested up to: 5.3
+Stable tag: 1.4.04
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
