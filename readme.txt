@@ -4,8 +4,8 @@ Donate link: https://straightvisions.com
 Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, google star reviews
 Requires PHP: 7.0
 Requires at least: 4.7
-Tested up to: 5.3
-Stable tag: 1.4.05
+Tested up to: 5.3.2
+Stable tag: 1.4.06
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -70,9 +70,12 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
-= 1.4.05 =
+= 1.4.06 =
 * core update
 * stars display fix
+
+= 1.4.05 =
+* core update
 
 = 1.4.04 =
 * core update
@@ -126,7 +129,7 @@ Initial Release
 
 == Upgrade Notice ==
 
-= 1.4.05 =
+= 1.4.06 =
 * core update
 * stars display fix
 
