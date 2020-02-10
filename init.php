@@ -14,12 +14,6 @@
 				return false;
 			}
 
-			$section_privacy_text =
-				'<p>'
-				. $this->get_section_title() . ' does not collect or share any data from clients or visitors.<br />'
-				. $this->get_section_title() . ' connects to the server of <a href="https://www.provenexpert.com/de/pa281/" target="_blank">ProvenExpert</a> and only sends the given API ID and API Key, to receive the rating for that account.
-				</p>';
-
 			$info = get_file_data($this->get_path($this->get_name().'.php'), array(
 				'name'	=> 'Plugin Name',
 				'desc'	=> 'Description'
@@ -27,6 +21,13 @@
 
 			$this->set_section_title( $info['name'] );
 			$this->set_section_desc( $info['desc'] );
+
+			$section_privacy_text =
+				'<p>'
+				. $this->get_section_title() . ' does not collect or share any data from clients or visitors.<br />'
+				. $this->get_section_title() . ' connects to the server of <a href="https://www.provenexpert.com/de/pa281/" target="_blank">ProvenExpert</a> and only sends the given API ID and API Key, to receive the rating for that account.
+				</p>';
+
 			$this->set_section_privacy( $section_privacy_text );
 
 			return $this;

@@ -13,7 +13,7 @@ class rating extends modules {
 		add_shortcode( 'sv_proven_expert', array( $this, 'shortcode' ) );
 
 		add_action('wp_footer', function(){
-echo '<script type="application/ld+json">
+/*echo '<script type="application/ld+json">
 {
 	"@context": "http://schema.org/",
 	"@type": "Organization",
@@ -25,7 +25,7 @@ echo '<script type="application/ld+json">
 		"ratingValue": "4.98"
 	}
 }
-</script>';
+</script>';*/
 });
 
 	}
