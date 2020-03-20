@@ -11,10 +11,10 @@
 			
 			if( get_transient( 'sv_provenexpert' ) ) {
 				$data										= get_transient( 'sv_provenexpert' );
-			} elseif( strlen( $settings['api_id']->run_type()->get_data() ) > 0 && strlen( $settings['api_key']->run_type()->get_data() ) > 0 ) {
+			} elseif( strlen( $settings['api_id']->get_data() ) > 0 && strlen( $settings['api_key']->get_data() ) > 0 ) {
 				$curl = $this->get_parent()::$remote_get->create( $this );
 				
-				$auth = base64_encode( trim( $settings['api_id']->run_type()->get_data() ) . ':' . trim( $settings['api_key']->run_type()->get_data() ) );
+				$auth = base64_encode( trim( $settings['api_id']->get_data() ) . ':' . trim( $settings['api_key']->get_data() ) );
 
 				$curl
 					->set_request_url( 'https://www.provenexpert.com/api_rating_v2.json?v=' . $this->get_version_core().'&id=straightvisions&type=wordpress-plugin' )
