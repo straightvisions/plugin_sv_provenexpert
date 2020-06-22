@@ -8,7 +8,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 5em;
-	height: 1.1em;
+	height: 14px;
 	margin: 0!important;
 	line-height: 1em;
 	font-size: 1em;
@@ -43,6 +43,7 @@
 	position:relative;
 	width: 75px;
 	margin: auto;
+	height: 15px;
 	line-height:15px;
 	overflow:hidden;
 	white-space: nowrap;
@@ -51,4 +52,12 @@
 	width:15px;
 	height:15px;
 	display:inline;
+}
+#pe_rating.pe_g #pe_name {
+	overflow: hidden;
+	position: absolute;
+	height: 10px;
+	line-height: 50px;
+	padding-top: 50px;
+	z-index:-1;
 }
