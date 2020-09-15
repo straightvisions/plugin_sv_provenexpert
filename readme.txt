@@ -4,7 +4,7 @@ Donate link: https://straightvisions.com
 Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, google star reviews
 Requires PHP: 7.0
 Requires at least: 4.7
-Tested up to: 5.3.2
+Tested up to: 5.5.1
 Stable tag: 1.4.08
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
