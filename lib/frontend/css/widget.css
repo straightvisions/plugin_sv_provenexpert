@@ -41,7 +41,7 @@
 }
 .sv_pe_stars{
 	position:relative;
-	width: 75px;
+	width: 75px !important;
 	margin: auto;
 	height: 15px;
 	line-height:15px;
