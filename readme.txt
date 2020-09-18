@@ -2,10 +2,10 @@
 Contributors: matthias-reuter, matthiasbathke, dennisheiden, adrianchudzynski
 Donate link: https://straightvisions.com
 Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, google star reviews
-Requires PHP: 7.0
-Requires at least: 4.7
+Requires PHP: 7.3
+Requires at least: 5.0
 Tested up to: 5.5.1
-Stable tag: 1.4.08
+Stable tag: 1.5.00
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,8 +14,8 @@ Show Review Stars via ProvenExpert.com in WordPress
 == Description ==
 
 = Requires: =
-* PHP 7.0 or higher
-* WordPress 4.7.x or higher
+* PHP 7.3 or higher
+* WordPress 5.0.x or higher
 * CuRL PHP extension
 
 = Service Description =
@@ -69,6 +69,9 @@ You can change the style via CSS, e.g. in your theme's style.css.
 4. Result: Review Stars in machine readable format for Google
 
 == Changelog ==
+
+= 1.5.00 =
+* core update
 
 = 1.4.08 =
 * core update
@@ -135,7 +138,7 @@ Initial Release
 
 == Upgrade Notice ==
 
-= 1.4.07 =
+= 1.5.00 =
 * core update
 
 == Missing a feature? ==
