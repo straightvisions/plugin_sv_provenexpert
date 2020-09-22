@@ -66,7 +66,7 @@
 			return $output;
 		}
 		
-		protected function load_settings(): widget {
+		public function load_settings() {
 			$this->get_setting( 'alignment' )
 				->set_title( __( 'Alignment', 'sv_provenexpert' ) )
 				->set_options( array(
