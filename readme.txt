@@ -70,6 +70,9 @@ You can change the style via CSS, e.g. in your theme's style.css.
 
 == Changelog ==
 
+= 1.5.10 =
+* update core
+
 = 1.5.00 =
 * core update
 
