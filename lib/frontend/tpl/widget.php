@@ -52,7 +52,7 @@
 					error_log('SV ProvenExpert - API ERROR - The version is outdated, please update - cached output available');
 				}
 			}else{
-				error_log('SV ProvenExpert - API ERROR - Empty API Credentials: '.var_export($settings['api_id']->get_data(),true).' '.var_export($settings['api_key']->get_data(), true));
+				error_log('SV ProvenExpert - API ERROR - Empty API Credentials.');
 				return '';
 			}
 
