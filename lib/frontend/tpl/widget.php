@@ -1,20 +1,18 @@
 <?php
 	if( function_exists( 'curl_init') ) {
-		// we have currently no extra styles for stars widget
-		//$this->get_parent()->scripts_queue['frontend']->set_is_enqueued();
-		
 		$errorMessage										= false;
 		$output												= '';
 
 		try {
-			$settings = $this->get_root()->modules->common_settings->load_settings()->get_settings();
-			
+			$api_id			= get_option('sv_provenexpert_modules_settings_api_id');
+			$api_key		= get_option('sv_provenexpert_modules_settings_api_key');
+
 			if( get_transient( 'sv_provenexpert' ) ) {
 				$data										= get_transient( 'sv_provenexpert' );
-			} elseif( strlen( $settings['api_id']->get_data() ) > 0 && strlen( $settings['api_key']->get_data() ) > 0 ) {
+			} elseif( strlen( $api_id ) > 0 && strlen( $api_key ) > 0 ) {
 				$curl = $this->get_parent()::$remote_get->create( $this );
 				
-				$auth = base64_encode( trim( $settings['api_id']->get_data() ) . ':' . trim( $settings['api_key']->get_data() ) );
+				$auth = base64_encode( trim( $api_id ) . ':' . trim( $api_key ) );
 
 				$curl
 					->set_request_url( 'https://www.provenexpert.com/api_rating_v2.json?v=' . $this->get_version_core().'&id=straightvisions&type=wordpress-plugin' )
@@ -32,91 +30,58 @@
 				$data										= json_decode( $json, true );
 
 				if( !is_array( $data ) ) {
-					/*
-					static::$log->create->log( $this, __FILE__ )
-					                    ->set_title( 'JSON ERROR' )
-					                    ->set_desc( 'Wrong JSON format.' )
-					                    ->set_desc( $json, 'admin' )
-					                    ->set_state( 'error' );
-					*/
+					error_log('SV ProvenExpert - API ERROR - Wrong JSON format - '.$json);
+				}
+
+				if( in_array( 'wrongPlan', $data['errors'] ) ) {
+					error_log('SV ProvenExpert - API ERROR - Your current ProvenExpert Plan has no API access, please upgrade');
 				}
 
 				if( $data['status'] == 'success' ) {
-					set_transient( 'sv_provenexpert', json_decode( $json,true ), 86400 );
-					/*
-					static::$log->create->log( $this, __FILE__ )
-					                    ->set_title( 'Widget created' )
-					                    ->set_desc( 'The widget was successfully created.' )
-					                    ->set_desc( 'New cache set.', 'admin' )
-					                    ->set_state( 'success' );
-					*/
-				} elseif( !in_array( 'wrongPlan', $data['errors'] ) ){
+					set_transient( 'sv_provenexpert', $data, 86400 );
+					error_log('SV ProvenExpert - CACHE - filled successfully.'.var_export($data, true));
+				}else {
 					$tmp									= get_transient( 'sv_provenexpert' );
 
-					if( is_array( $tmp ) ) {
-						$data								= $tmp;
-						/*
-						static::$log->create->log( $this, __FILE__ )
-						                    ->set_title( 'Outdated cache' )
-						                    ->set_desc( 'The version is outdated, please update the plugin.' )
-						                    ->set_desc( 'Uses old cached version.', 'admin' )
-						                    ->set_state( 'warning' );
-						*/
-					} else {
-						/*
-						static::$log->create->log( $this, __FILE__ )
-						                    ->set_title( 'Cache Error' )
-						                    ->set_desc( 'The version is outdated, please update.' )
-						                    ->set_desc( 'No cached version was found.', 'admin' )
-						                    ->set_state( 'error' );
-						*/
+					if( !is_array( $tmp ) ) {
+						error_log('SV ProvenExpert - API ERROR - The version is outdated, please update - No cached output available');
+						return '';
 					}
+
+					$data								= $tmp;
+					error_log('SV ProvenExpert - API ERROR - The version is outdated, please update - cached output available');
 				}
+			}else{
+				error_log('SV ProvenExpert - API ERROR - Empty API Credentials: '.var_export($settings['api_id']->get_data(),true).' '.var_export($settings['api_key']->get_data(), true));
+				return '';
 			}
 
 			// print aggregate rating html
-			if( isset($data['status']) && $data['status'] == 'success' ) {
-				$output										= $data['aggregateRating'];
-			} else {
-				if( isset( $data['errors'] ) && is_array( $data['errors'] ) ) {
-					/*
-					static::$log->create->log( $this, __FILE__ )
-					                    ->set_title( 'Response Error' )
-					                    ->set_desc( 'No response from the ProvenExpert server.' )
-					                    ->set_desc( implode( ', ', $data['errors'] ), 'admin' )
-					                    ->set_state( 'error' );
-					*/
-				} else {
-					/*
-					static::$log->create->log( $this, __FILE__ )
-					                    ->set_title( 'Response Error' )
-					                    ->set_desc( 'No response from the ProvenExpert server.' )
-					                    ->set_desc( ' ', 'admin' )
-					                    ->set_state( 'error' );
-					*/
-				}
+			if(!isset($data)){
+				error_log('SV ProvenExpert - API ERROR - No Data Found');
+				return '';
 			}
+
+			if( isset( $data['errors'] ) && is_array( $data['errors'] ) ) {
+				error_log('SV ProvenExpert - API ERROR - There were errors. '.implode( ', ', $data['errors'] ));
+				return '';
+			}
+
+			if( !isset($data['status']) || $data['status'] != 'success' ) {
+				error_log('SV ProvenExpert - API ERROR - Unsupported API Status '.var_export($data, true));
+				return '';
+			}
+
+			$output										= $data['aggregateRating'];
+
 		} catch( Exception $e ) {
-			/*
-			static::$log->create->log( $this, __FILE__ )
-			                    ->set_title( 'Exception Error' )
-			                    ->set_desc( 'Exception Error' )
-			                    ->set_desc( $e->__toString(), 'admin' )
-			                    ->set_state( 'error' );
-			*/
+			error_log('SV ProvenExpert - API ERROR - Exception Error. '.$e->__toString());
 		}
 	} else {
-		/*
-		static::$log->create->log( $this, __FILE__ )
-		                    ->set_title( 'CURL missing' )
-		                    ->set_desc( 'The CURL package is not installed, please install CURL to use this plugin.' )
-		                    ->set_desc( 'Install CURL: <a href="https://curl.haxx.se/download.html" target="_blank">Download</a>', 'admin' )
-		                    ->set_state( 'error' );
-		*/
+		error_log('SV ProvenExpert - API ERROR - The CURL package is not installed, please install CURL to use this plugin.');
 	}
 
 	// filter
-
 	$output		= str_replace('@font-face{', '@font-face{font-display: swap;',  $output);
 	preg_match('/<style(.*)?>(.*)?<\/style>/', $output, $match);
 	$output		= str_replace($match[0], '', $output);
