@@ -16,17 +16,9 @@ class clear_cache extends widget {
 	public function init() {
 
 		if( isset( $_POST['clear_cache'] ) ) {
-			
 			delete_transient( 'sv_provenexpert' );
-			
-			/*
-			static::$log->create->log( $this, __FILE__ )
-			                    ->set_title( 'Cached cleared' )
-			                    ->set_desc( 'The cache was cleared successfully.' )
-			                    ->set_desc( 'The cache was cleared successfully.', 'admin' )
-			                    ->set_state( 'success' );
-			*/
-			
+
+			error_log('SV ProvenExpert - CACHE - cleared successfully.');
 		}
 
 		$this->get_root()->add_section( $this )
