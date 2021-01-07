@@ -6,8 +6,8 @@ if(!class_exists('\sv_core\core_plugin')) {
 }
 
 class init extends \sv_core\core_plugin {
-	const version = 1512;
-	const version_core_match = 5101;
+	const version = 1513;
+	const version_core_match = 5104;
 
 	public function load(){
 		if(!$this->setup( __NAMESPACE__, __FILE__ )){
@@ -18,11 +18,10 @@ class init extends \sv_core\core_plugin {
 			'name'	=> 'Plugin Name',
 			'desc'	=> 'Description'
 		));
-
-		$this->set_section_title( $info['name'] );
-		$this->set_section_desc( $info['desc'] );
-
-		$this->set_section_privacy( '<p>
+		$this->set_section_title( $info['name'] )
+			->set_section_desc( $info['desc'] )
+			->set_section_type('')
+			->set_section_privacy( '<p>
 				' . $this->get_section_title() . ' does not collect or share any data from clients or visitors.<br />
 				' . $this->get_section_title() . ' connects to the server of <a href="https://www.provenexpert.com/de/pa281/" target="_blank">ProvenExpert</a> and only sends the given API ID and API Key, to receive the rating for that account.
 			</p>' );
