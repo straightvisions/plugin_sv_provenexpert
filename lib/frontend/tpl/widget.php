@@ -33,7 +33,7 @@
 					error_log('SV ProvenExpert - API ERROR - Wrong JSON format - '.$json);
 				}
 
-				if( in_array( 'wrongPlan', $data['errors'] ) ) {
+				if( isset($data['errors']) && in_array( 'wrongPlan', $data['errors'] ) ) {
 					error_log('SV ProvenExpert - API ERROR - Your current ProvenExpert Plan has no API access, please upgrade');
 				}
 
