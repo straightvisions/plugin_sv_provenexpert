@@ -5,7 +5,7 @@ Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, googl
 Requires PHP: 7.3
 Requires at least: 5.3.2
 Tested up to: 5.5.3
-Stable tag: 1.5.13
+Stable tag: 1.5.14
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -69,6 +69,9 @@ You can change the style via CSS, e.g. in your theme's style.css.
 4. Result: Review Stars in machine readable format for Google
 
 == Changelog ==
+
+= 1.5.14 =
+* core update
 
 = 1.5.13 =
 * core update
@@ -150,7 +153,7 @@ Initial Release
 
 == Upgrade Notice ==
 
-= 1.5.13 =
+= 1.5.14 =
 * core update
 
 == Missing a feature? ==

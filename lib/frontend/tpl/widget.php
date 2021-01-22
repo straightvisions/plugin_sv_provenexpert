@@ -33,7 +33,7 @@
 					error_log('SV ProvenExpert - API ERROR - Wrong JSON format - '.$json);
 				}
 
-				if( in_array( 'wrongPlan', $data['errors'] ) ) {
+				if( isset($data['errors']) && in_array( 'wrongPlan', $data['errors'] ) ) {
 					error_log('SV ProvenExpert - API ERROR - Your current ProvenExpert Plan has no API access, please upgrade');
 				}
 
@@ -87,7 +87,7 @@
 	$output		= str_replace($match[0], '', $output);
 
 	$stars		= '
-	<div class="sv_pe_stars" style="width:'.(round(floatval($data['ratingValue']*15),2)).'px;"><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" /></div>
+	<div class="sv_pe_stars" style="width:'.(round(floatval($data['ratingValue']*15),2)).'px;"><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /></div>
 	';
 
 	$output		= str_replace('<span id="pe_stars">', '<span id="pe_stars">'.$stars, $output);
