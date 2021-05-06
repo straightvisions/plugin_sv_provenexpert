@@ -18,9 +18,8 @@ class modules extends init {
 		->load_settings()
 		->get_root()->add_section( $this );
 
-		$this->freemius->init();
-		//$this->common_settings->init();
-		$this->widget->init();
+		$this->load_module('widget');
+		$this->load_module('freemius');
 	}
 	public function load_settings() {
 		$this->get_setting('api_id')
