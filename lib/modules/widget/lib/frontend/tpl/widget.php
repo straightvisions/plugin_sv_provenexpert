@@ -87,11 +87,9 @@
 	$output		= str_replace($match[0], '', $output);
 
 	$stars		= '
-	<div class="sv_pe_stars" style="width:'.(round(floatval($data['ratingValue']*15),2)).'px;"><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/assets/img/star.svg').'" alt="" /></div>
+	<div class="sv_pe_stars" style="width:'.(round(floatval($data['ratingValue']*15),2)).'px;"><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /></div>
 	';
 
 	$output		= str_replace('<span id="pe_stars">', '<span id="pe_stars">'.$stars, $output);
-	
-	$this->get_root()->modules->widget->get_script( 'config' )->set_is_enqueued();
-	$this->get_root()->modules->widget->get_script( 'frontend' )->set_is_enqueued();
+
 	echo '<div class="sv_provenexpert">' . $output . '</div>';

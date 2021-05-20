@@ -3,9 +3,7 @@ namespace sv_provenexpert;
 
 class clear_cache extends widget {
 	public function __construct() {
-		$this->set_section_title( 'Tools' );
-		$this->set_section_desc( 'Some helpfull tools, to manage the SV ProvenExpert Plugin.' );
-		$this->set_section_type('tools');
+
 	}
 	/**
 	 * @desc			initialize actions and filters
@@ -22,6 +20,9 @@ class clear_cache extends widget {
 		}
 
 		$this->get_root()->add_section( $this )
-			->set_section_template_path($this->get_path('lib/backend/tpl/tools.php'));
+			->set_section_template_path('lib/backend/tpl/tools.php')
+			->set_section_title( 'Tools' )
+			->set_section_desc( 'Some helpfull tools, to manage the SV ProvenExpert Plugin.' )
+			->set_section_type('tools');;
 	}
 }

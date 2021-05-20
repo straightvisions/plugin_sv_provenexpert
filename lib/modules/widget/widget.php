@@ -47,9 +47,22 @@
 			add_shortcode( 'sv_proven_expert', array( $this, 'shortcode' ) );
 
 			$this->clear_cache->init();
+
+			// conditionally load Custom CSS for active Widgets
+			add_action('wp', function(){
+				if(is_active_widget(false, false, 'sv_provenexpert_widget') !== false ){
+					$this->get_script( 'config' )->set_is_enqueued();
+					$this->get_script( 'frontend' )->set_is_enqueued();
+				}
+			}, 9999999999);
 		}
 
 		public function shortcode() {
+			$this->get_script( 'config' )->set_is_enqueued();
+			$this->get_script( 'frontend' )->set_is_enqueued();
+
+			var_dump($this->get_script( 'frontend' )->get_url()); die('end');
+
 			ob_start();
 			
 			the_widget( static::$widget_class_name, array(), array(
