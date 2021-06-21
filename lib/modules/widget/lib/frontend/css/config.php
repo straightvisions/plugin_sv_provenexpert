@@ -1,17 +1,20 @@
 <?php
-	$alignment = $script->get_parent()->get_setting( 'alignment' )->run_type()->get_data();
-	
+	$alignment = $script->get_parent()->get_setting( 'alignment' )->get_data();
+
+	$alignment_css = false;
 	switch ( $alignment ) {
 		case 'left':
-			$alignment = 'flex-start';
+			$alignment_css = 'flex-start';
 			break;
 		case 'right':
-			$alignment = 'flex-end';
+			$alignment_css = 'flex-end';
 			break;
 	}
-?>
 
-
-.sv_provenexpert {
-	align-items: <?php echo $alignment; ?>;
-}
+	if($alignment_css){
+		echo '
+			.sv_provenexpert {
+				align-items: test'.$alignment_css.';
+			}
+		';
+	}

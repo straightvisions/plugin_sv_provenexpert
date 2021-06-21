@@ -61,8 +61,6 @@
 			$this->get_script( 'config' )->set_is_enqueued();
 			$this->get_script( 'frontend' )->set_is_enqueued();
 
-			var_dump($this->get_script( 'frontend' )->get_url()); die('end');
-
 			ob_start();
 			
 			the_widget( static::$widget_class_name, array(), array(
@@ -72,10 +70,8 @@
 				'after_title'										=> ''
 			) );
 			
-			$output													= ob_get_contents();
-			
-			ob_end_clean();
-			
+			$output													= ob_get_clean();
+
 			return $output;
 		}
 		
@@ -93,7 +89,7 @@
 		}
 		
 		protected function register_scripts(): widget {
-			$this->get_script( 'config' )->set_inline( true )->set_path( 'lib/frontend/css/config.php' );
+			$this->get_script( 'config' )->set_inline( true )->set_path( 'lib/modules/widget/lib/frontend/css/config.php' );
 			$this->get_script( 'frontend' )->set_path( 'lib/frontend/css/widget.css' );
 			
 			return $this;
