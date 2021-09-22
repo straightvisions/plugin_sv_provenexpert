@@ -47,11 +47,12 @@
 	line-height:15px;
 	overflow:hidden;
 	white-space: nowrap;
+	display:flex;
 }
 .sv_pe_stars img{
 	width:15px;
 	height:15px;
-	display:inline;
+	display:block;
 }
 #pe_rating.pe_g #pe_name {
 	overflow: hidden;
