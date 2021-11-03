@@ -167,7 +167,7 @@ Initial Release
 
 == Upgrade Notice ==
 
-= 1.7.00 =
+= 1.8.00 =
 
 ### Various
 
