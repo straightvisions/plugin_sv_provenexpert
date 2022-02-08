@@ -87,7 +87,7 @@
 	$output		= str_replace($match[0], '', $output);
 
 	$stars		= '
-	<div class="sv_pe_stars" style="width:'.(round(floatval($data['ratingValue']*15),2)).'px;"><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /></div>
+	<div class="sv_pe_stars" style="width:'.(round(floatval($data['ratingValue']*15),2)).'px;"><img width="15" height="15" src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img width="15" height="15" src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img width="15" height="15" src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img width="15" height="15" src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /><img width="15" height="15" src="'.$this->get_url('lib/frontend/img/star.svg').'" alt="" /></div>
 	';
 
 	$output		= str_replace('<span id="pe_stars">', '<span id="pe_stars">'.$stars, $output);
