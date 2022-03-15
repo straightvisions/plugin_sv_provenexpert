@@ -50,10 +50,10 @@
 
 			// conditionally load Custom CSS for active Widgets
 			add_action('wp', function(){
-				if(is_active_widget(false, false, 'sv_provenexpert_widget') !== false ){
+				//if(is_active_widget(false, false, 'sv_provenexpert_widget') !== false ){ // disabled as doesn't work when blocks are used in sidebar
 					$this->get_script( 'config' )->set_is_enqueued();
 					$this->get_script( 'frontend' )->set_is_enqueued();
-				}
+				//}
 			}, 9999999999);
 		}
 
