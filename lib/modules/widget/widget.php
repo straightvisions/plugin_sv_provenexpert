@@ -1,30 +1,9 @@
 <?php
 	namespace sv_provenexpert;
 
-	/**
-	 * @author			Matthias Bathke
-	 * @package			sv_proven_expert
-	 * @copyright		2017 Matthias Bathke
-	 * @link			https://straightvisions.com
-	 * @since			1.0
-	 */
 	class widget extends modules {
 		protected static $widget_class_name = '';
-		/**
-		 * @desc			Loads other classes of package
-		 * @author			Matthias Bathke
-		 * @since			1.0
-		 * @ignore
-		 */
-		public function __construct() {
 
-		}
-		/**
-		 * @desc			initialize actions and filters
-		 * @return	void
-		 * @author			Matthias Bathke
-		 * @since			1.0
-		 */
 		public function init() {
 			$this->set_section_title( __( 'Widget Settings', 'sv_provenexpert' ) );
 			$this->set_section_desc(__( 'Manage your widgets', 'sv_provenexpert' )  );
@@ -58,7 +37,6 @@
 		}
 
 		public function shortcode() {
-			$this->get_script( 'config' )->set_is_enqueued();
 			$this->get_script( 'frontend' )->set_is_enqueued();
 
 			ob_start();
@@ -74,22 +52,8 @@
 
 			return $output;
 		}
-		
-		public function load_settings() {
-			$this->get_setting( 'alignment' )
-				->set_title( __( 'Alignment', 'sv_provenexpert' ) )
-				->set_options( array(
-					'left'      => __( 'Left', 'sv_provenexpert' ),
-					'center'    => __( 'Center', 'sv_provenexpert' ),
-					'right'     => __( 'Right', 'sv_provenexpert' )
-				) )
-				->set_default_value( 'center' )
-				->load_type( 'select' );
-			return $this;
-		}
-		
+
 		protected function register_scripts(): widget {
-			$this->get_script( 'config' )->set_inline( true )->set_path( 'lib/modules/widget/lib/frontend/css/config.php' );
 			$this->get_script( 'frontend' )->set_path( 'lib/frontend/css/widget.css' );
 			
 			return $this;

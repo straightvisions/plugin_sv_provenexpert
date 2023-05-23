@@ -2,24 +2,15 @@
 namespace sv_provenexpert;
 
 class modules extends init {
-	public function __construct() {
-
-	}
-	/**
-	 * @desc			initialize modules
-	 * @return	void
-	 * @author			Matthias Bathke
-	 * @since			1.0
-	 */
 	public function init() {
 		$this->set_section_title( __('API Settings', $this->get_root()->get_prefix()) )
-		->set_section_desc( sprintf(__('Fill out the API settings and add the widget or shortcode %s to your site.', $this->get_root()->get_prefix()), '<strong>[sv_provenexpert]</strong>') )
+		->set_section_desc( sprintf(__('Fill out the settings and add the block, widget or shortcode %s.', $this->get_root()->get_prefix()), '<strong>[sv_provenexpert]</strong>') )
 		->set_section_type('settings')
 		->load_settings()
 		->get_root()->add_section( $this );
 
 		$this->load_module('widget');
-		$this->load_module('freemius');
+		$this->load_module('block');
 	}
 	public function load_settings() {
 		$this->get_setting('api_id')

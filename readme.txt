@@ -2,10 +2,10 @@
 Contributors: matthias-reuter, matthiasbathke, dennisheiden
 Donate link: https://straightvisions.com
 Tags: proven expert, provenexpert, straightvisions, reviews, star reviews, google star reviews
-Requires PHP: 7.3
-Requires at least: 5.3.2
-Tested up to: 6.0.0
-Stable tag: 1.9.00
+Requires PHP: 8.0
+Requires at least: 6.0.0
+Tested up to: 6.2.2
+Stable tag: 2.0.00
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -69,6 +69,10 @@ You can change the style via CSS, e.g. in your theme's style.css.
 4. Result: Review Stars in machine readable format for Google
 
 == Changelog ==
+
+= 2.0.00 =
+* Core Update
+* Block Support added
 
 = 1.9.00 =
 * Core Update
@@ -184,9 +188,7 @@ Improved Caching
 Initial Release
 
 == Upgrade Notice ==
-
-= 1.9.00 =
-* Core Update
+Core Update, Block Support added
 
 == Missing a feature? ==
 
