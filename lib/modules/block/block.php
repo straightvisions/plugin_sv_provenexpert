@@ -9,11 +9,10 @@
 			$this->get_script( 'editor' )
 				->set_path('editor.css');
 
-			wp_register_script(
-				'sv-provenexpert-block',
-				$this->get_url('build/block.build.js'),
-				array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor' )
-			);
+			$this->get_script( 'block' )
+				->set_type('js')
+				->set_path('build/block.build.js')
+				->set_deps(array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor' ));
 
 			register_block_type( 'sv-provenexpert/sv-provenexpert', array(
 				'attributes' => array(
@@ -22,7 +21,7 @@
 						'default' => '[sv_provenexpert]',
 					),
 				),
-				'editor_script' => 'sv-provenexpert-block',
+				'editor_script' => $this->get_script( 'block' )->get_handle(),
 				'render_callback' => function ($attributes) {
 					return do_shortcode($attributes['blockValue']);
 				},
