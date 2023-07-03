@@ -47,7 +47,8 @@
 	line-height:15px;
 	overflow:hidden;
 	white-space: nowrap;
-	display:flex;
+	padding-top: 0 !important;
+	display: flex !important;
 }
 .sv_pe_stars img{
 	width:15px;
