@@ -14,9 +14,8 @@ Show Review Stars via ProvenExpert.com in WordPress
 == Description ==
 
 = Requires: =
-* PHP 7.3 or higher
-* WordPress 5.3.x or higher
 * CuRL PHP extension
+* Proven Expert PLUS plan or higher
 
 = Service Description =
 
@@ -28,17 +27,17 @@ This plugin is build to show review stars retrieved via <a href="https://straigh
 
 = Team =
 
-* Developed and maintenanced by <a href="https://straightvisions.com">straightvisions</a>
+* Developed and maintained by <a href="https://straightvisions.com">STRAIGHTVISIONS</a>
 
 == Installation ==
 
 This plugin is build to work out-of-the-box. Installation is quite simple.
 
-1. Upload `sv_provenexpert`-directory to the `/wp-content/plugins/` directory
+1. Upload `sv-provenexpert`-directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Register a free account on <a href="https://straightvisions.com/go/proven-expert/">ProvenExpert.com</a> - you can try out this feature 30 days for free.
 4. Insert Api Keys in plugin settings - see menu entry "straightvisions" in WP-Admin
-5. Add the widget or shortcode `[sv_proven_expert]` somewhere in your wordpress.
+5. Add the block, widget or shortcode `[sv_proven_expert]` somewhere in your wordpress.
 6. You are using a caching plugin? Don't forget to flush caches now.
 
 <a href="https://straightvisions.com/sv-proven-expert/">ProvenExpert WordPress Plugin Docs</a> are available in English and German.
