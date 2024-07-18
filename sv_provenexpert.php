@@ -1,6 +1,6 @@
 <?php
 /*
-Version: 2.0.05
+Version: 2.0.06
 Plugin Name: SV ProvenExpert
 Text Domain: sv_provenexpert
 Description: Show rating stars via ProvenExpert.com in WordPress.
